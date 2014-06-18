@@ -20,7 +20,7 @@ public class ManejadorArchivos {
 	public List<RecorridoPorBicicleta> leerCSV(String ruta) throws IOException {
 
 		CSVReader reader = new CSVReader(new FileReader(ruta), ';');
-
+		
 		List<RecorridoPorBicicleta> recorridos = new ArrayList<RecorridoPorBicicleta>();
 
 		// Linea por linea
@@ -50,7 +50,7 @@ public class ManejadorArchivos {
 
 				recorridos.add(recorrido);
 
-				// Por lineas con errores en ultimo campo
+			// Por lineas con errores en ultimo campo
 			} catch (NumberFormatException e) {
 
 				recorrido.setTiempoUso(0);

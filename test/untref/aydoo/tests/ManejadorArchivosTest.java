@@ -18,7 +18,7 @@ public class ManejadorArchivosTest {
 			throws IOException {
 
 		// El registro recortado posee 15000 registros
-		String ruta = "/home/guillermo/GUILLE/UNTREF/AyDOO/recorrido-bicis-2013-recortado.csv";
+		String ruta = "data/recorrido-bicis-2013-recortado.csv";
 		ManejadorArchivos manejador = new ManejadorArchivos();
 
 		List<RecorridoPorBicicleta> recorridos = new ArrayList<RecorridoPorBicicleta>();
