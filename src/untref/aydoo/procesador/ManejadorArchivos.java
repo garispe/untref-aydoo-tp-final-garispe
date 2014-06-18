@@ -12,9 +12,7 @@ import au.com.bytecode.opencsv.CSVReader;
 
 public class ManejadorArchivos {
 
-	private	String rutaSalida = "/home/guillermo/GUILLE/UNTREF/AyDOO/archivo_resultado.yml";
-
-	public void escribirYML(Resultado resultado) throws IOException {
+	public void escribirYML(String rutaSalida, Resultado resultado) throws IOException {
 
 		Yaml.dump(resultado, new File(rutaSalida));
 	}
@@ -26,10 +24,10 @@ public class ManejadorArchivos {
 		List<RecorridoPorBicicleta> recorridos = new ArrayList<RecorridoPorBicicleta>();
 
 		// Linea por linea
-		String[] linea = null;
+		String[] linea;
 
 		// Salteo la primer fila
-		reader.readNext();
+		 reader.readNext();
 
 		while ((linea = reader.readNext()) != null) {
 
@@ -52,8 +50,7 @@ public class ManejadorArchivos {
 
 				recorridos.add(recorrido);
 
-				
-			// Por lineas con errores en ultimo campo	
+				// Por lineas con errores en ultimo campo
 			} catch (NumberFormatException e) {
 
 				recorrido.setTiempoUso(0);

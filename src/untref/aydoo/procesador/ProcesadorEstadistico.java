@@ -1,13 +1,10 @@
 package untref.aydoo.procesador;
 
-import java.io.IOException;
 import java.util.List;
 
 public class ProcesadorEstadistico {
 
 	private ManejadorArchivos manejadorArchivos;
-	private Resultado resultado;
-	private String ruta = "/home/guillermo/GUILLE/UNTREF/AyDOO/recorrido-bicis-2013.csv";
 
 	public ProcesadorEstadistico() {
 
@@ -64,32 +61,5 @@ public class ProcesadorEstadistico {
 		}
 
 		return tiempoPromedio / totalRecorridos;
-	}
-
-	public void getRecorridoMasRealizado(List<RecorridoPorBicicleta> recorridos){
-		
-		
-	}
-	
-	public void imprimirResultado() throws IOException {
-	
-		List<RecorridoPorBicicleta> recorridos = getManejadorArchivos()
-				.leerCSV(ruta);
-
-		resultado = new Resultado();
-
-		resultado.setID_bicicletaMasUsada(getBicicletaMasUsada(recorridos));
-		resultado.setID_bicicletaMenosUsada(getBicicletaMenosUsada(recorridos));
-		resultado.setTiempoPromedioUso(getTiempoPromedioUso(recorridos));
-
-		getManejadorArchivos().escribirYML(resultado);
-	}
-
-	public static void main(String[] args) throws IOException {
-
-		ProcesadorEstadistico p = new ProcesadorEstadistico();
-
-		p.imprimirResultado();
-
 	}
 }
