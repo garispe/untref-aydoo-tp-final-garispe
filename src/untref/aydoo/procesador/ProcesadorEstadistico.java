@@ -47,7 +47,6 @@ public class ProcesadorEstadistico {
 				ID_bicicletaMasUsada = ID_auxiliar;
 
 			}
-
 			// COMPARAR POR TIEMPOS EN CASO DE SER IGUALES, O CANTIDAD = 0
 		}
 
@@ -98,22 +97,25 @@ public class ProcesadorEstadistico {
 		return tiempoTotal / recorridos.size();
 	}
 
-	public String getRecorridoMasRealizado(	List<RecorridoPorBicicleta> recorridos) {
+	public String getRecorridoMasRealizado(
+			List<RecorridoPorBicicleta> recorridos) {
 
 		String recorridoMasRealizado = "---";
-		String parOrigenDestinoAuxiliar;
+		RecorridoPorBicicleta recorridoAuxiliar;
 		int maximo = 0;
 		int cantidadIguales;
 
 		for (int i = 0; i < recorridos.size(); i++) {
 
-			parOrigenDestinoAuxiliar = recorridos.get(i).getParOrigenDestino();
+			recorridoAuxiliar = recorridos.get(i);
 			cantidadIguales = -1;
 
 			for (int j = 0; j < recorridos.size(); j++) {
 
-				if (recorridos.get(j).getParOrigenDestino()
-						.equals(parOrigenDestinoAuxiliar)) {
+				if (recorridos.get(j).getID_estacionOrigen() == recorridoAuxiliar
+						.getID_estacionOrigen()
+						&& recorridos.get(j).getID_estacionDestino() == recorridoAuxiliar
+								.getID_estacionDestino()) {
 
 					cantidadIguales++;
 				}
@@ -122,7 +124,7 @@ public class ProcesadorEstadistico {
 			if (cantidadIguales > maximo) {
 
 				maximo = cantidadIguales;
-				recorridoMasRealizado = parOrigenDestinoAuxiliar;
+				recorridoMasRealizado = recorridoAuxiliar.getParOrigenDestino();
 			}
 		}
 
@@ -132,10 +134,11 @@ public class ProcesadorEstadistico {
 	public void imprimirResultado() throws IOException, ZipException {
 
 		String rutaSalida = "data/test.yml";
-		File archivo = new File("data/recorridos-15000.zip");
-		
-		List<RecorridoPorBicicleta> recorridos = getManejadorArchivos().obtenerRecorridos(archivo);
-		
+		File archivo = new File("data/recorridos-2013-aux.zip");
+
+		List<RecorridoPorBicicleta> recorridos = getManejadorArchivos()
+				.obtenerRecorridos(archivo);
+
 		resultado = new Resultado();
 
 		resultado.setID_bicicletaMasUsada(getBicicletaMasUsada(recorridos));
