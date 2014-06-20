@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="4" failures="0" hostname="skorpios" name="untref.aydoo.tests.ProcesadorTest" tests="4" time="0.039" timestamp="2014-06-20T05:18:04">
+  <properties>
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="coverage.summaryxml.dir" value="/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/build/reports/cobertura-summary-xml" />
+    <property name="libs" value="/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="sun.management.compiler" value="HotSpot Tiered Compilers" />
+    <property name="os.name" value="Linux" />
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-7-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-7-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-7-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-7-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-7-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-7-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-7-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-7-oracle/jre/classes" />
+    <property name="reports.html.dir" value="/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/build/reports/junit-html" />
+    <property name="sun.desktop" value="gnome" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="net.sourceforge.cobertura.datafile" value="/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/build/cobertura.ser" />
+    <property name="ant.home" value="/usr/share/ant" />
+    <property name="java.runtime.version" value="1.7.0_60-b19" />
+    <property name="cobertura.dir" value="/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs" />
+    <property name="user.name" value="guillermo" />
+    <property name="ant.file.proyecto-java-aydoo" value="/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/build.xml" />
+    <property name="ant.file.type.proyecto-java-aydoo" value="file" />
+    <property name="user.language" value="es" />
+    <property name="build" value="/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/build" />
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-7-oracle/jre/lib/i386" />
+    <property name="reports.dir" value="/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/build/reports" />
+    <property name="ant.project.default-target" value="test" />
+    <property name="ant.project.name" value="proyecto-java-aydoo" />
+    <property name="java.version" value="1.7.0_60" />
+    <property name="coverage.html.dir" value="/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/build/reports/cobertura-html" />
+    <property name="user.timezone" value="" />
+    <property name="sun.arch.data.model" value="32" />
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-7-oracle/jre/lib/endorsed" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="sun.jnu.encoding" value="UTF-8" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="file.separator" value="/" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="classes.dir" value="/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/build" />
+    <property name="java.class.version" value="51.0" />
+    <property name="user.country" value="AR" />
+    <property name="java.home" value="/usr/lib/jvm/java-7-oracle/jre" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="ant.file" value="/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/build.xml" />
+    <property name="os.version" value="3.11.0-23-generic" />
+    <property name="path.separator" value=":" />
+    <property name="java.vm.version" value="24.60-b09" />
+    <property name="ant.library.dir" value="/usr/share/ant/lib" />
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit" />
+    <property name="reports.xml.dir" value="/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/build/reports/junit-xml" />
+    <property name="user.home" value="/home/guillermo" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="coverage.xml.dir" value="/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/build/reports/cobertura-xml" />
+    <property name="java.library.path" value="/usr/java/packages/lib/i386:/lib:/usr/lib" />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/junittestcases932491108155509872.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/build/reports/junit-xml/IGNORETHIS.xml crashfile=/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/junitvmwatcher5610009816469837662.properties propsfile=/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/junit2967730945827358028.properties" />
+    <property name="java.class.path" value="/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/build/instrumented:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/build:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs/asm-3.0.jar:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs/asm-tree-3.0.jar:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs/checkstyle-5.5-all.jar:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs/cobertura.jar:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs/jakarta-oro-2.0.8.jar:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs/junit-4.10.jar:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs/jyaml-1.3.jar:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs/log4j-1.2.9.jar:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs/mockito-all-1.9.0.jar:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs/opencsv-2.3.jar:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs/zip4j_1.3.2.jar:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/build/tests:/usr/share/ant/lib/junit.jar:/usr/share/java/ant-launcher-1.8.2.jar:/usr/share/ant/lib/ant.jar:/usr/share/ant/lib/ant-junit.jar:/usr/share/ant/lib/ant-junit4.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.8.2 compiled on December 3 2011" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="ant.file.type" value="file" />
+    <property name="java.vm.specification.version" value="1.7" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.os.patch.level" value="unknown" />
+    <property name="java.io.tmpdir" value="/tmp" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="os.arch" value="i386" />
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment" />
+    <property name="instrumented.dir" value="/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/build/instrumented" />
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-7-oracle/jre/lib/ext:/usr/java/packages/lib/ext" />
+    <property name="user.dir" value="/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe" />
+    <property name="line.separator" value="&#xa;" />
+    <property name="java.vm.name" value="Java HotSpot(TM) Server VM" />
+    <property name="basedir" value="/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe" />
+    <property name="ant.java.version" value="1.7" />
+    <property name="ant.core.lib" value="/usr/share/ant/lib/ant.jar" />
+    <property name="file.encoding" value="UTF-8" />
+    <property name="java.specification.version" value="1.7" />
+    <property name="src.dir" value="/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/src" />
+    <property name="ant.project.invoked-targets" value="test" />
+  </properties>
+  <testcase classname="untref.aydoo.tests.ProcesadorTest" name="elRecorridoMasRealizadoDeberiaSerElEsperadoSegunLosRecorridosCargados" time="0.008">
+    <error message="Instruction type does not match stack map&#xa;Exception Details:&#xa;  Location:&#xa;    untref/aydoo/procesador/ProcesadorEstadistico.getRecorridoMasRealizado(Ljava/util/List;)Ljava/lang/String; @40: iload&#xa;  Reason:&#xa;    Type integer (current frame, locals[2]) is not assignable to &apos;java/lang/String&apos; (stack map, locals[2])&#xa;  Current Frame:&#xa;    bci: @40&#xa;    flags: { }&#xa;    locals: { &apos;untref/aydoo/procesador/ProcesadorEstadistico&apos;, &apos;java/util/List&apos;, integer, integer, &apos;java/lang/String&apos;, top, integer, top, integer }&#xa;    stack: { }&#xa;  Stackmap Frame:&#xa;    bci: @40&#xa;    flags: { }&#xa;    locals: { &apos;untref/aydoo/procesador/ProcesadorEstadistico&apos;, &apos;java/util/List&apos;, &apos;java/lang/String&apos;, top, integer, top, integer }&#xa;    stack: { }&#xa;  Bytecode:&#xa;    0000000: 033d 11ff ff3e 120f 1100 67b8 0015 124f&#xa;    0000010: 3a04 120f 1100 69b8 0015 0336 0612 0f11&#xa;    0000020: 006c b800 1503 3608 1508 2bb9 002b 0100&#xa;    0000030: 1100 6c3d 1100 003e a201 581c 1100 6ca0&#xa;    0000040: 0016 1d11 0000 a000 0f12 0f1c 1d04 b800&#xa;    0000050: 2f11 ffff 3e12 0f11 006e b800 152b 1508&#xa;    0000060: b900 3302 00c0 0035 b600 553a 0512 0f11&#xa;    0000070: 006f b800 1502 3607 120f 1100 71b8 0015&#xa;    0000080: 0336 0915 092b b900 2b01 0011 0071 3d11&#xa;    0000090: 0000 3ea2 0086 1c11 0071 a000 161d 1100&#xa;    00000a0: 00a0 000f 120f 1c1d 04b8 002f 11ff ff3e&#xa;    00000b0: 120f 1100 73b8 0015 2b15 09b9 0033 0200&#xa;    00000c0: c000 35b6 0055 1905 b600 5911 0073 3d11&#xa;    00000d0: 0000 3e99 0028 1c11 0073 a000 161d 1100&#xa;    00000e0: 00a0 000f 120f 1c1d 04b8 002f 11ff ff3e&#xa;    00000f0: 120f 1100 76b8 0015 8407 011d 9b00 0f12&#xa;    0000100: 0f1c 1d03 b800 2f11 ffff 3e12 0f11 0071&#xa;    0000110: b800 1584 0901 a7ff 6d1d 9b00 0f12 0f1c&#xa;    0000120: 1d03 b800 2f11 ffff 3e12 0f11 007a b800&#xa;    0000130: 1515 0715 0611 007a 3d11 0000 3ea4 0035&#xa;    0000140: 1c11 007a a000 161d 1100 00a0 000f 120f&#xa;    0000150: 1c1d 04b8 002f 11ff ff3e 120f 1100 7cb8&#xa;    0000160: 0015 1507 3606 120f 1100 7db8 0015 1905&#xa;    0000170: 3a04 1d9b 000f 120f 1c1d 03b8 002f 11ff&#xa;    0000180: ff3e 120f 1100 6cb8 0015 8408 01a7 fe9b&#xa;    0000190: 1d9b 000f 120f 1c1d 03b8 002f 11ff ff3e&#xa;    00001a0: 120f 1100 81b8 0015 1904 b0            &#xa;  Stackmap Table:&#xa;    full_frame(@40,{Object[#2],Object[#39],Object[#81],Top,Integer,Top,Integer},{})&#xa;    full_frame(@131,{Object[#2],Object[#39],Object[#81],Object[#81],Integer,Integer,Integer,Integer},{})&#xa;    same_frame_extended(@275)&#xa;    chop_frame(@305,1)&#xa;    same_frame_extended(@394)&#xa;    full_frame(@424,{Object[#2],Object[#39],Object[#81],Top,Integer},{})&#xa;" type="java.lang.VerifyError">java.lang.VerifyError: Instruction type does not match stack map
+Exception Details:
+  Location:
+    untref/aydoo/procesador/ProcesadorEstadistico.getRecorridoMasRealizado(Ljava/util/List;)Ljava/lang/String; @40: iload
+  Reason:
+    Type integer (current frame, locals[2]) is not assignable to &apos;java/lang/String&apos; (stack map, locals[2])
+  Current Frame:
+    bci: @40
+    flags: { }
+    locals: { &apos;untref/aydoo/procesador/ProcesadorEstadistico&apos;, &apos;java/util/List&apos;, integer, integer, &apos;java/lang/String&apos;, top, integer, top, integer }
+    stack: { }
+  Stackmap Frame:
+    bci: @40
+    flags: { }
+    locals: { &apos;untref/aydoo/procesador/ProcesadorEstadistico&apos;, &apos;java/util/List&apos;, &apos;java/lang/String&apos;, top, integer, top, integer }
+    stack: { }
+  Bytecode:
+    0000000: 033d 11ff ff3e 120f 1100 67b8 0015 124f
+    0000010: 3a04 120f 1100 69b8 0015 0336 0612 0f11
+    0000020: 006c b800 1503 3608 1508 2bb9 002b 0100
+    0000030: 1100 6c3d 1100 003e a201 581c 1100 6ca0
+    0000040: 0016 1d11 0000 a000 0f12 0f1c 1d04 b800
+    0000050: 2f11 ffff 3e12 0f11 006e b800 152b 1508
+    0000060: b900 3302 00c0 0035 b600 553a 0512 0f11
+    0000070: 006f b800 1502 3607 120f 1100 71b8 0015
+    0000080: 0336 0915 092b b900 2b01 0011 0071 3d11
+    0000090: 0000 3ea2 0086 1c11 0071 a000 161d 1100
+    00000a0: 00a0 000f 120f 1c1d 04b8 002f 11ff ff3e
+    00000b0: 120f 1100 73b8 0015 2b15 09b9 0033 0200
+    00000c0: c000 35b6 0055 1905 b600 5911 0073 3d11
+    00000d0: 0000 3e99 0028 1c11 0073 a000 161d 1100
+    00000e0: 00a0 000f 120f 1c1d 04b8 002f 11ff ff3e
+    00000f0: 120f 1100 76b8 0015 8407 011d 9b00 0f12
+    0000100: 0f1c 1d03 b800 2f11 ffff 3e12 0f11 0071
+    0000110: b800 1584 0901 a7ff 6d1d 9b00 0f12 0f1c
+    0000120: 1d03 b800 2f11 ffff 3e12 0f11 007a b800
+    0000130: 1515 0715 0611 007a 3d11 0000 3ea4 0035
+    0000140: 1c11 007a a000 161d 1100 00a0 000f 120f
+    0000150: 1c1d 04b8 002f 11ff ff3e 120f 1100 7cb8
+    0000160: 0015 1507 3606 120f 1100 7db8 0015 1905
+    0000170: 3a04 1d9b 000f 120f 1c1d 03b8 002f 11ff
+    0000180: ff3e 120f 1100 6cb8 0015 8408 01a7 fe9b
+    0000190: 1d9b 000f 120f 1c1d 03b8 002f 11ff ff3e
+    00001a0: 120f 1100 81b8 0015 1904 b0            
+  Stackmap Table:
+    full_frame(@40,{Object[#2],Object[#39],Object[#81],Top,Integer,Top,Integer},{})
+    full_frame(@131,{Object[#2],Object[#39],Object[#81],Object[#81],Integer,Integer,Integer,Integer},{})
+    same_frame_extended(@275)
+    chop_frame(@305,1)
+    same_frame_extended(@394)
+    full_frame(@424,{Object[#2],Object[#39],Object[#81],Top,Integer},{})
+
+	at untref.aydoo.tests.ProcesadorTest.elRecorridoMasRealizadoDeberiaSerElEsperadoSegunLosRecorridosCargados(ProcesadorTest.java:18)
+</error>
+  </testcase>
+  <testcase classname="untref.aydoo.tests.ProcesadorTest" name="laBicicletaMasUsadaDeberiaSerLaEsperadaSegunLosRecorridosCargados" time="0.002">
+    <error message="Instruction type does not match stack map&#xa;Exception Details:&#xa;  Location:&#xa;    untref/aydoo/procesador/ProcesadorEstadistico.getRecorridoMasRealizado(Ljava/util/List;)Ljava/lang/String; @40: iload&#xa;  Reason:&#xa;    Type integer (current frame, locals[2]) is not assignable to &apos;java/lang/String&apos; (stack map, locals[2])&#xa;  Current Frame:&#xa;    bci: @40&#xa;    flags: { }&#xa;    locals: { &apos;untref/aydoo/procesador/ProcesadorEstadistico&apos;, &apos;java/util/List&apos;, integer, integer, &apos;java/lang/String&apos;, top, integer, top, integer }&#xa;    stack: { }&#xa;  Stackmap Frame:&#xa;    bci: @40&#xa;    flags: { }&#xa;    locals: { &apos;untref/aydoo/procesador/ProcesadorEstadistico&apos;, &apos;java/util/List&apos;, &apos;java/lang/String&apos;, top, integer, top, integer }&#xa;    stack: { }&#xa;  Bytecode:&#xa;    0000000: 033d 11ff ff3e 120f 1100 67b8 0015 124f&#xa;    0000010: 3a04 120f 1100 69b8 0015 0336 0612 0f11&#xa;    0000020: 006c b800 1503 3608 1508 2bb9 002b 0100&#xa;    0000030: 1100 6c3d 1100 003e a201 581c 1100 6ca0&#xa;    0000040: 0016 1d11 0000 a000 0f12 0f1c 1d04 b800&#xa;    0000050: 2f11 ffff 3e12 0f11 006e b800 152b 1508&#xa;    0000060: b900 3302 00c0 0035 b600 553a 0512 0f11&#xa;    0000070: 006f b800 1502 3607 120f 1100 71b8 0015&#xa;    0000080: 0336 0915 092b b900 2b01 0011 0071 3d11&#xa;    0000090: 0000 3ea2 0086 1c11 0071 a000 161d 1100&#xa;    00000a0: 00a0 000f 120f 1c1d 04b8 002f 11ff ff3e&#xa;    00000b0: 120f 1100 73b8 0015 2b15 09b9 0033 0200&#xa;    00000c0: c000 35b6 0055 1905 b600 5911 0073 3d11&#xa;    00000d0: 0000 3e99 0028 1c11 0073 a000 161d 1100&#xa;    00000e0: 00a0 000f 120f 1c1d 04b8 002f 11ff ff3e&#xa;    00000f0: 120f 1100 76b8 0015 8407 011d 9b00 0f12&#xa;    0000100: 0f1c 1d03 b800 2f11 ffff 3e12 0f11 0071&#xa;    0000110: b800 1584 0901 a7ff 6d1d 9b00 0f12 0f1c&#xa;    0000120: 1d03 b800 2f11 ffff 3e12 0f11 007a b800&#xa;    0000130: 1515 0715 0611 007a 3d11 0000 3ea4 0035&#xa;    0000140: 1c11 007a a000 161d 1100 00a0 000f 120f&#xa;    0000150: 1c1d 04b8 002f 11ff ff3e 120f 1100 7cb8&#xa;    0000160: 0015 1507 3606 120f 1100 7db8 0015 1905&#xa;    0000170: 3a04 1d9b 000f 120f 1c1d 03b8 002f 11ff&#xa;    0000180: ff3e 120f 1100 6cb8 0015 8408 01a7 fe9b&#xa;    0000190: 1d9b 000f 120f 1c1d 03b8 002f 11ff ff3e&#xa;    00001a0: 120f 1100 81b8 0015 1904 b0            &#xa;  Stackmap Table:&#xa;    full_frame(@40,{Object[#2],Object[#39],Object[#81],Top,Integer,Top,Integer},{})&#xa;    full_frame(@131,{Object[#2],Object[#39],Object[#81],Object[#81],Integer,Integer,Integer,Integer},{})&#xa;    same_frame_extended(@275)&#xa;    chop_frame(@305,1)&#xa;    same_frame_extended(@394)&#xa;    full_frame(@424,{Object[#2],Object[#39],Object[#81],Top,Integer},{})&#xa;" type="java.lang.VerifyError">java.lang.VerifyError: Instruction type does not match stack map
+Exception Details:
+  Location:
+    untref/aydoo/procesador/ProcesadorEstadistico.getRecorridoMasRealizado(Ljava/util/List;)Ljava/lang/String; @40: iload
+  Reason:
+    Type integer (current frame, locals[2]) is not assignable to &apos;java/lang/String&apos; (stack map, locals[2])
+  Current Frame:
+    bci: @40
+    flags: { }
+    locals: { &apos;untref/aydoo/procesador/ProcesadorEstadistico&apos;, &apos;java/util/List&apos;, integer, integer, &apos;java/lang/String&apos;, top, integer, top, integer }
+    stack: { }
+  Stackmap Frame:
+    bci: @40
+    flags: { }
+    locals: { &apos;untref/aydoo/procesador/ProcesadorEstadistico&apos;, &apos;java/util/List&apos;, &apos;java/lang/String&apos;, top, integer, top, integer }
+    stack: { }
+  Bytecode:
+    0000000: 033d 11ff ff3e 120f 1100 67b8 0015 124f
+    0000010: 3a04 120f 1100 69b8 0015 0336 0612 0f11
+    0000020: 006c b800 1503 3608 1508 2bb9 002b 0100
+    0000030: 1100 6c3d 1100 003e a201 581c 1100 6ca0
+    0000040: 0016 1d11 0000 a000 0f12 0f1c 1d04 b800
+    0000050: 2f11 ffff 3e12 0f11 006e b800 152b 1508
+    0000060: b900 3302 00c0 0035 b600 553a 0512 0f11
+    0000070: 006f b800 1502 3607 120f 1100 71b8 0015
+    0000080: 0336 0915 092b b900 2b01 0011 0071 3d11
+    0000090: 0000 3ea2 0086 1c11 0071 a000 161d 1100
+    00000a0: 00a0 000f 120f 1c1d 04b8 002f 11ff ff3e
+    00000b0: 120f 1100 73b8 0015 2b15 09b9 0033 0200
+    00000c0: c000 35b6 0055 1905 b600 5911 0073 3d11
+    00000d0: 0000 3e99 0028 1c11 0073 a000 161d 1100
+    00000e0: 00a0 000f 120f 1c1d 04b8 002f 11ff ff3e
+    00000f0: 120f 1100 76b8 0015 8407 011d 9b00 0f12
+    0000100: 0f1c 1d03 b800 2f11 ffff 3e12 0f11 0071
+    0000110: b800 1584 0901 a7ff 6d1d 9b00 0f12 0f1c
+    0000120: 1d03 b800 2f11 ffff 3e12 0f11 007a b800
+    0000130: 1515 0715 0611 007a 3d11 0000 3ea4 0035
+    0000140: 1c11 007a a000 161d 1100 00a0 000f 120f
+    0000150: 1c1d 04b8 002f 11ff ff3e 120f 1100 7cb8
+    0000160: 0015 1507 3606 120f 1100 7db8 0015 1905
+    0000170: 3a04 1d9b 000f 120f 1c1d 03b8 002f 11ff
+    0000180: ff3e 120f 1100 6cb8 0015 8408 01a7 fe9b
+    0000190: 1d9b 000f 120f 1c1d 03b8 002f 11ff ff3e
+    00001a0: 120f 1100 81b8 0015 1904 b0            
+  Stackmap Table:
+    full_frame(@40,{Object[#2],Object[#39],Object[#81],Top,Integer,Top,Integer},{})
+    full_frame(@131,{Object[#2],Object[#39],Object[#81],Object[#81],Integer,Integer,Integer,Integer},{})
+    same_frame_extended(@275)
+    chop_frame(@305,1)
+    same_frame_extended(@394)
+    full_frame(@424,{Object[#2],Object[#39],Object[#81],Top,Integer},{})
+
+	at untref.aydoo.tests.ProcesadorTest.laBicicletaMasUsadaDeberiaSerLaEsperadaSegunLosRecorridosCargados(ProcesadorTest.java:56)
+</error>
+  </testcase>
+  <testcase classname="untref.aydoo.tests.ProcesadorTest" name="laBicicletaMenosUsadaDeberiaSerLaEsperadaSegunLosRecorridosCargados" time="0.003">
+    <error message="Instruction type does not match stack map&#xa;Exception Details:&#xa;  Location:&#xa;    untref/aydoo/procesador/ProcesadorEstadistico.getRecorridoMasRealizado(Ljava/util/List;)Ljava/lang/String; @40: iload&#xa;  Reason:&#xa;    Type integer (current frame, locals[2]) is not assignable to &apos;java/lang/String&apos; (stack map, locals[2])&#xa;  Current Frame:&#xa;    bci: @40&#xa;    flags: { }&#xa;    locals: { &apos;untref/aydoo/procesador/ProcesadorEstadistico&apos;, &apos;java/util/List&apos;, integer, integer, &apos;java/lang/String&apos;, top, integer, top, integer }&#xa;    stack: { }&#xa;  Stackmap Frame:&#xa;    bci: @40&#xa;    flags: { }&#xa;    locals: { &apos;untref/aydoo/procesador/ProcesadorEstadistico&apos;, &apos;java/util/List&apos;, &apos;java/lang/String&apos;, top, integer, top, integer }&#xa;    stack: { }&#xa;  Bytecode:&#xa;    0000000: 033d 11ff ff3e 120f 1100 67b8 0015 124f&#xa;    0000010: 3a04 120f 1100 69b8 0015 0336 0612 0f11&#xa;    0000020: 006c b800 1503 3608 1508 2bb9 002b 0100&#xa;    0000030: 1100 6c3d 1100 003e a201 581c 1100 6ca0&#xa;    0000040: 0016 1d11 0000 a000 0f12 0f1c 1d04 b800&#xa;    0000050: 2f11 ffff 3e12 0f11 006e b800 152b 1508&#xa;    0000060: b900 3302 00c0 0035 b600 553a 0512 0f11&#xa;    0000070: 006f b800 1502 3607 120f 1100 71b8 0015&#xa;    0000080: 0336 0915 092b b900 2b01 0011 0071 3d11&#xa;    0000090: 0000 3ea2 0086 1c11 0071 a000 161d 1100&#xa;    00000a0: 00a0 000f 120f 1c1d 04b8 002f 11ff ff3e&#xa;    00000b0: 120f 1100 73b8 0015 2b15 09b9 0033 0200&#xa;    00000c0: c000 35b6 0055 1905 b600 5911 0073 3d11&#xa;    00000d0: 0000 3e99 0028 1c11 0073 a000 161d 1100&#xa;    00000e0: 00a0 000f 120f 1c1d 04b8 002f 11ff ff3e&#xa;    00000f0: 120f 1100 76b8 0015 8407 011d 9b00 0f12&#xa;    0000100: 0f1c 1d03 b800 2f11 ffff 3e12 0f11 0071&#xa;    0000110: b800 1584 0901 a7ff 6d1d 9b00 0f12 0f1c&#xa;    0000120: 1d03 b800 2f11 ffff 3e12 0f11 007a b800&#xa;    0000130: 1515 0715 0611 007a 3d11 0000 3ea4 0035&#xa;    0000140: 1c11 007a a000 161d 1100 00a0 000f 120f&#xa;    0000150: 1c1d 04b8 002f 11ff ff3e 120f 1100 7cb8&#xa;    0000160: 0015 1507 3606 120f 1100 7db8 0015 1905&#xa;    0000170: 3a04 1d9b 000f 120f 1c1d 03b8 002f 11ff&#xa;    0000180: ff3e 120f 1100 6cb8 0015 8408 01a7 fe9b&#xa;    0000190: 1d9b 000f 120f 1c1d 03b8 002f 11ff ff3e&#xa;    00001a0: 120f 1100 81b8 0015 1904 b0            &#xa;  Stackmap Table:&#xa;    full_frame(@40,{Object[#2],Object[#39],Object[#81],Top,Integer,Top,Integer},{})&#xa;    full_frame(@131,{Object[#2],Object[#39],Object[#81],Object[#81],Integer,Integer,Integer,Integer},{})&#xa;    same_frame_extended(@275)&#xa;    chop_frame(@305,1)&#xa;    same_frame_extended(@394)&#xa;    full_frame(@424,{Object[#2],Object[#39],Object[#81],Top,Integer},{})&#xa;" type="java.lang.VerifyError">java.lang.VerifyError: Instruction type does not match stack map
+Exception Details:
+  Location:
+    untref/aydoo/procesador/ProcesadorEstadistico.getRecorridoMasRealizado(Ljava/util/List;)Ljava/lang/String; @40: iload
+  Reason:
+    Type integer (current frame, locals[2]) is not assignable to &apos;java/lang/String&apos; (stack map, locals[2])
+  Current Frame:
+    bci: @40
+    flags: { }
+    locals: { &apos;untref/aydoo/procesador/ProcesadorEstadistico&apos;, &apos;java/util/List&apos;, integer, integer, &apos;java/lang/String&apos;, top, integer, top, integer }
+    stack: { }
+  Stackmap Frame:
+    bci: @40
+    flags: { }
+    locals: { &apos;untref/aydoo/procesador/ProcesadorEstadistico&apos;, &apos;java/util/List&apos;, &apos;java/lang/String&apos;, top, integer, top, integer }
+    stack: { }
+  Bytecode:
+    0000000: 033d 11ff ff3e 120f 1100 67b8 0015 124f
+    0000010: 3a04 120f 1100 69b8 0015 0336 0612 0f11
+    0000020: 006c b800 1503 3608 1508 2bb9 002b 0100
+    0000030: 1100 6c3d 1100 003e a201 581c 1100 6ca0
+    0000040: 0016 1d11 0000 a000 0f12 0f1c 1d04 b800
+    0000050: 2f11 ffff 3e12 0f11 006e b800 152b 1508
+    0000060: b900 3302 00c0 0035 b600 553a 0512 0f11
+    0000070: 006f b800 1502 3607 120f 1100 71b8 0015
+    0000080: 0336 0915 092b b900 2b01 0011 0071 3d11
+    0000090: 0000 3ea2 0086 1c11 0071 a000 161d 1100
+    00000a0: 00a0 000f 120f 1c1d 04b8 002f 11ff ff3e
+    00000b0: 120f 1100 73b8 0015 2b15 09b9 0033 0200
+    00000c0: c000 35b6 0055 1905 b600 5911 0073 3d11
+    00000d0: 0000 3e99 0028 1c11 0073 a000 161d 1100
+    00000e0: 00a0 000f 120f 1c1d 04b8 002f 11ff ff3e
+    00000f0: 120f 1100 76b8 0015 8407 011d 9b00 0f12
+    0000100: 0f1c 1d03 b800 2f11 ffff 3e12 0f11 0071
+    0000110: b800 1584 0901 a7ff 6d1d 9b00 0f12 0f1c
+    0000120: 1d03 b800 2f11 ffff 3e12 0f11 007a b800
+    0000130: 1515 0715 0611 007a 3d11 0000 3ea4 0035
+    0000140: 1c11 007a a000 161d 1100 00a0 000f 120f
+    0000150: 1c1d 04b8 002f 11ff ff3e 120f 1100 7cb8
+    0000160: 0015 1507 3606 120f 1100 7db8 0015 1905
+    0000170: 3a04 1d9b 000f 120f 1c1d 03b8 002f 11ff
+    0000180: ff3e 120f 1100 6cb8 0015 8408 01a7 fe9b
+    0000190: 1d9b 000f 120f 1c1d 03b8 002f 11ff ff3e
+    00001a0: 120f 1100 81b8 0015 1904 b0            
+  Stackmap Table:
+    full_frame(@40,{Object[#2],Object[#39],Object[#81],Top,Integer,Top,Integer},{})
+    full_frame(@131,{Object[#2],Object[#39],Object[#81],Object[#81],Integer,Integer,Integer,Integer},{})
+    same_frame_extended(@275)
+    chop_frame(@305,1)
+    same_frame_extended(@394)
+    full_frame(@424,{Object[#2],Object[#39],Object[#81],Top,Integer},{})
+
+	at untref.aydoo.tests.ProcesadorTest.laBicicletaMenosUsadaDeberiaSerLaEsperadaSegunLosRecorridosCargados(ProcesadorTest.java:88)
+</error>
+  </testcase>
+  <testcase classname="untref.aydoo.tests.ProcesadorTest" name="elTiempoDeberiaSerElEsperadoSegunLosRecorridosCargados" time="0.003">
+    <error message="Instruction type does not match stack map&#xa;Exception Details:&#xa;  Location:&#xa;    untref/aydoo/procesador/ProcesadorEstadistico.getRecorridoMasRealizado(Ljava/util/List;)Ljava/lang/String; @40: iload&#xa;  Reason:&#xa;    Type integer (current frame, locals[2]) is not assignable to &apos;java/lang/String&apos; (stack map, locals[2])&#xa;  Current Frame:&#xa;    bci: @40&#xa;    flags: { }&#xa;    locals: { &apos;untref/aydoo/procesador/ProcesadorEstadistico&apos;, &apos;java/util/List&apos;, integer, integer, &apos;java/lang/String&apos;, top, integer, top, integer }&#xa;    stack: { }&#xa;  Stackmap Frame:&#xa;    bci: @40&#xa;    flags: { }&#xa;    locals: { &apos;untref/aydoo/procesador/ProcesadorEstadistico&apos;, &apos;java/util/List&apos;, &apos;java/lang/String&apos;, top, integer, top, integer }&#xa;    stack: { }&#xa;  Bytecode:&#xa;    0000000: 033d 11ff ff3e 120f 1100 67b8 0015 124f&#xa;    0000010: 3a04 120f 1100 69b8 0015 0336 0612 0f11&#xa;    0000020: 006c b800 1503 3608 1508 2bb9 002b 0100&#xa;    0000030: 1100 6c3d 1100 003e a201 581c 1100 6ca0&#xa;    0000040: 0016 1d11 0000 a000 0f12 0f1c 1d04 b800&#xa;    0000050: 2f11 ffff 3e12 0f11 006e b800 152b 1508&#xa;    0000060: b900 3302 00c0 0035 b600 553a 0512 0f11&#xa;    0000070: 006f b800 1502 3607 120f 1100 71b8 0015&#xa;    0000080: 0336 0915 092b b900 2b01 0011 0071 3d11&#xa;    0000090: 0000 3ea2 0086 1c11 0071 a000 161d 1100&#xa;    00000a0: 00a0 000f 120f 1c1d 04b8 002f 11ff ff3e&#xa;    00000b0: 120f 1100 73b8 0015 2b15 09b9 0033 0200&#xa;    00000c0: c000 35b6 0055 1905 b600 5911 0073 3d11&#xa;    00000d0: 0000 3e99 0028 1c11 0073 a000 161d 1100&#xa;    00000e0: 00a0 000f 120f 1c1d 04b8 002f 11ff ff3e&#xa;    00000f0: 120f 1100 76b8 0015 8407 011d 9b00 0f12&#xa;    0000100: 0f1c 1d03 b800 2f11 ffff 3e12 0f11 0071&#xa;    0000110: b800 1584 0901 a7ff 6d1d 9b00 0f12 0f1c&#xa;    0000120: 1d03 b800 2f11 ffff 3e12 0f11 007a b800&#xa;    0000130: 1515 0715 0611 007a 3d11 0000 3ea4 0035&#xa;    0000140: 1c11 007a a000 161d 1100 00a0 000f 120f&#xa;    0000150: 1c1d 04b8 002f 11ff ff3e 120f 1100 7cb8&#xa;    0000160: 0015 1507 3606 120f 1100 7db8 0015 1905&#xa;    0000170: 3a04 1d9b 000f 120f 1c1d 03b8 002f 11ff&#xa;    0000180: ff3e 120f 1100 6cb8 0015 8408 01a7 fe9b&#xa;    0000190: 1d9b 000f 120f 1c1d 03b8 002f 11ff ff3e&#xa;    00001a0: 120f 1100 81b8 0015 1904 b0            &#xa;  Stackmap Table:&#xa;    full_frame(@40,{Object[#2],Object[#39],Object[#81],Top,Integer,Top,Integer},{})&#xa;    full_frame(@131,{Object[#2],Object[#39],Object[#81],Object[#81],Integer,Integer,Integer,Integer},{})&#xa;    same_frame_extended(@275)&#xa;    chop_frame(@305,1)&#xa;    same_frame_extended(@394)&#xa;    full_frame(@424,{Object[#2],Object[#39],Object[#81],Top,Integer},{})&#xa;" type="java.lang.VerifyError">java.lang.VerifyError: Instruction type does not match stack map
+Exception Details:
+  Location:
+    untref/aydoo/procesador/ProcesadorEstadistico.getRecorridoMasRealizado(Ljava/util/List;)Ljava/lang/String; @40: iload
+  Reason:
+    Type integer (current frame, locals[2]) is not assignable to &apos;java/lang/String&apos; (stack map, locals[2])
+  Current Frame:
+    bci: @40
+    flags: { }
+    locals: { &apos;untref/aydoo/procesador/ProcesadorEstadistico&apos;, &apos;java/util/List&apos;, integer, integer, &apos;java/lang/String&apos;, top, integer, top, integer }
+    stack: { }
+  Stackmap Frame:
+    bci: @40
+    flags: { }
+    locals: { &apos;untref/aydoo/procesador/ProcesadorEstadistico&apos;, &apos;java/util/List&apos;, &apos;java/lang/String&apos;, top, integer, top, integer }
+    stack: { }
+  Bytecode:
+    0000000: 033d 11ff ff3e 120f 1100 67b8 0015 124f
+    0000010: 3a04 120f 1100 69b8 0015 0336 0612 0f11
+    0000020: 006c b800 1503 3608 1508 2bb9 002b 0100
+    0000030: 1100 6c3d 1100 003e a201 581c 1100 6ca0
+    0000040: 0016 1d11 0000 a000 0f12 0f1c 1d04 b800
+    0000050: 2f11 ffff 3e12 0f11 006e b800 152b 1508
+    0000060: b900 3302 00c0 0035 b600 553a 0512 0f11
+    0000070: 006f b800 1502 3607 120f 1100 71b8 0015
+    0000080: 0336 0915 092b b900 2b01 0011 0071 3d11
+    0000090: 0000 3ea2 0086 1c11 0071 a000 161d 1100
+    00000a0: 00a0 000f 120f 1c1d 04b8 002f 11ff ff3e
+    00000b0: 120f 1100 73b8 0015 2b15 09b9 0033 0200
+    00000c0: c000 35b6 0055 1905 b600 5911 0073 3d11
+    00000d0: 0000 3e99 0028 1c11 0073 a000 161d 1100
+    00000e0: 00a0 000f 120f 1c1d 04b8 002f 11ff ff3e
+    00000f0: 120f 1100 76b8 0015 8407 011d 9b00 0f12
+    0000100: 0f1c 1d03 b800 2f11 ffff 3e12 0f11 0071
+    0000110: b800 1584 0901 a7ff 6d1d 9b00 0f12 0f1c
+    0000120: 1d03 b800 2f11 ffff 3e12 0f11 007a b800
+    0000130: 1515 0715 0611 007a 3d11 0000 3ea4 0035
+    0000140: 1c11 007a a000 161d 1100 00a0 000f 120f
+    0000150: 1c1d 04b8 002f 11ff ff3e 120f 1100 7cb8
+    0000160: 0015 1507 3606 120f 1100 7db8 0015 1905
+    0000170: 3a04 1d9b 000f 120f 1c1d 03b8 002f 11ff
+    0000180: ff3e 120f 1100 6cb8 0015 8408 01a7 fe9b
+    0000190: 1d9b 000f 120f 1c1d 03b8 002f 11ff ff3e
+    00001a0: 120f 1100 81b8 0015 1904 b0            
+  Stackmap Table:
+    full_frame(@40,{Object[#2],Object[#39],Object[#81],Top,Integer,Top,Integer},{})
+    full_frame(@131,{Object[#2],Object[#39],Object[#81],Object[#81],Integer,Integer,Integer,Integer},{})
+    same_frame_extended(@275)
+    chop_frame(@305,1)
+    same_frame_extended(@394)
+    full_frame(@424,{Object[#2],Object[#39],Object[#81],Top,Integer},{})
+
+	at untref.aydoo.tests.ProcesadorTest.elTiempoDeberiaSerElEsperadoSegunLosRecorridosCargados(ProcesadorTest.java:120)
+</error>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

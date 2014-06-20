@@ -37,6 +37,7 @@
 
 	<target name="compilar.aplicacion" depends="setup">
 		<javac srcdir="src" destdir="${build}" includeantruntime="false" debug="yes" target="1.7">
+			<classpath refid="classpath" />
 		</javac>
 	</target>
 
