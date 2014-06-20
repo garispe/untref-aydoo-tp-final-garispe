@@ -1,24 +1,24 @@
 package untref.aydoo.procesador;
 
-
 public class RecorridoPorBicicleta {
 
 	private int ID_usuario;
 	private int ID_bicicleta;
+
 	private String fechaOrigen;
 	private Integer ID_estacionOrigen;
 	private String nombreOrigen;
+
 	private String fechaDestino;
 	private Integer ID_estacionDestino;
 	private String nombreDestino;
-	private int tiempoUso;
 	
-	public String getParOrigenDestino(){
-		
-		
+	private int tiempoUso;
+
+	public String getParOrigenDestino() {
 		return ID_estacionOrigen.toString().concat("-" + ID_estacionDestino.toString());
 	}
-	
+
 	public int getID_usuario() {
 		return ID_usuario;
 	}
@@ -43,15 +43,15 @@ public class RecorridoPorBicicleta {
 		this.fechaOrigen = fechaOrigen;
 	}
 
-	public int getID_estacionOrigen() {
+	public Integer getID_estacionOrigen() {
 		return ID_estacionOrigen;
 	}
 
-	public void setID_estacionOrigen(int iD_estacionOrigen) {
+	public void setID_estacionOrigen(Integer iD_estacionOrigen) {
 		ID_estacionOrigen = iD_estacionOrigen;
 	}
 
-	public String getNombreOrgien() {
+	public String getNombreOrigen() {
 		return nombreOrigen;
 	}
 
@@ -67,11 +67,11 @@ public class RecorridoPorBicicleta {
 		this.fechaDestino = fechaDestino;
 	}
 
-	public int getID_estacionDestino() {
+	public Integer getID_estacionDestino() {
 		return ID_estacionDestino;
 	}
 
-	public void setID_estacionDestino(int iD_estacionDestino) {
+	public void setID_estacionDestino(Integer iD_estacionDestino) {
 		ID_estacionDestino = iD_estacionDestino;
 	}
 

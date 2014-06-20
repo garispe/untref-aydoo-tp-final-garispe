@@ -1,10 +1,14 @@
 package untref.aydoo.procesador;
 
+import java.io.IOException;
 import java.util.List;
+
+import net.lingala.zip4j.exception.ZipException;
 
 public class ProcesadorEstadistico {
 
 	private ManejadorArchivos manejadorArchivos;
+	private Resultado resultado;
 
 	public ProcesadorEstadistico() {
 
@@ -18,33 +22,64 @@ public class ProcesadorEstadistico {
 
 	public int getBicicletaMasUsada(List<RecorridoPorBicicleta> recorridos) {
 
-		int id_bicicletaMasUsada = 0;
-		int maximo = recorridos.get(0).getTiempoUso();
+		int ID_bicicletaMasUsada = 0;
+		int maximo = 0;
+		int ID_auxiliar = 0;
+		int cantidadIguales;
 
 		for (int i = 0; i < recorridos.size(); i++) {
 
-			if (recorridos.get(i).getTiempoUso() >= maximo) {
+			ID_auxiliar = recorridos.get(i).getID_bicicleta();
+			cantidadIguales = -1;
 
-				maximo = recorridos.get(i).getTiempoUso();
-				id_bicicletaMasUsada = recorridos.get(i).getID_bicicleta();
+			for (int j = 0; j < recorridos.size(); j++) {
+
+				if (recorridos.get(j).getID_bicicleta() == ID_auxiliar) {
+
+					cantidadIguales++;
+				}
 			}
+
+			if (cantidadIguales > maximo) {
+
+				maximo = cantidadIguales;
+				ID_bicicletaMasUsada = ID_auxiliar;
+
+			}
+
+			// COMPARAR POR TIEMPOS EN CASO DE SER IGUALES, O CANTIDAD = 0
 		}
 
-		return id_bicicletaMasUsada;
+		return ID_bicicletaMasUsada;
 	}
 
 	public int getBicicletaMenosUsada(List<RecorridoPorBicicleta> recorridos) {
 
 		int id_bicicletaMenosUsada = 0;
-		int minimo = recorridos.get(0).getTiempoUso();
+		int minimo = recorridos.size();
+		int ID_auxiliar;
+		int cantidadIguales;
 
 		for (int i = 0; i < recorridos.size(); i++) {
 
-			if (recorridos.get(i).getTiempoUso() <= minimo) {
+			ID_auxiliar = recorridos.get(i).getID_bicicleta();
+			cantidadIguales = -1;
 
-				minimo = recorridos.get(i).getTiempoUso();
-				id_bicicletaMenosUsada = recorridos.get(i).getID_bicicleta();
+			for (int j = 0; j < recorridos.size(); j++) {
+
+				if (recorridos.get(j).getID_bicicleta() == ID_auxiliar) {
+
+					cantidadIguales++;
+				}
 			}
+
+			if (cantidadIguales < minimo) {
+
+				minimo = cantidadIguales;
+				id_bicicletaMenosUsada = ID_auxiliar;
+			}
+
+			// COMPARAR POR TIEMPOS EN CASO DE SER IGUALES, O CANTIDAD = 0
 		}
 
 		return id_bicicletaMenosUsada;
@@ -52,14 +87,66 @@ public class ProcesadorEstadistico {
 
 	public double getTiempoPromedioUso(List<RecorridoPorBicicleta> recorridos) {
 
-		double tiempoPromedio = 0.0;
-		int totalRecorridos = recorridos.size();
+		double tiempoTotal = 0.0;
 
 		for (int i = 0; i < recorridos.size(); i++) {
 
-			tiempoPromedio = tiempoPromedio + recorridos.get(i).getTiempoUso();
+			tiempoTotal = tiempoTotal + recorridos.get(i).getTiempoUso();
 		}
 
-		return tiempoPromedio / totalRecorridos;
+		return tiempoTotal / recorridos.size();
+	}
+
+	public String getRecorridoMasRealizado(
+			List<RecorridoPorBicicleta> recorridos) {
+
+		String recorridoMasRealizado = "---";
+		String parOrigenDestinoAuxiliar;
+		int maximo = 0;
+		int cantidadIguales;
+
+		for (int i = 0; i < recorridos.size(); i++) {
+
+			parOrigenDestinoAuxiliar = recorridos.get(i).getParOrigenDestino();
+			cantidadIguales = -1;
+
+			for (int j = 0; j < recorridos.size(); j++) {
+
+				if (recorridos.get(j).getParOrigenDestino()
+						.equals(parOrigenDestinoAuxiliar)) {
+
+					cantidadIguales++;
+				}
+			}
+
+			if (cantidadIguales > maximo) {
+
+				maximo = cantidadIguales;
+				recorridoMasRealizado = parOrigenDestinoAuxiliar;
+			}
+		}
+
+		return recorridoMasRealizado;
+	}
+
+	public void imprimirResultado() throws IOException, ZipException {
+
+		// String rutaSalida = "data/test.yml";
+
+		// getManejadorArchivos().extraer(new File("data/recorridos-2013.zip"));
+
+		List<RecorridoPorBicicleta> recorridos = getManejadorArchivos()
+				.obtenerRecorridos("data/recorridos-recortado.csv");
+		resultado = new Resultado();
+
+		resultado.setID_bicicletaMasUsada(getBicicletaMasUsada(recorridos));
+
+		resultado.setID_bicicletaMenosUsada(getBicicletaMenosUsada(recorridos));
+
+		resultado.setTiempoPromedioUso(getTiempoPromedioUso(recorridos));
+
+		resultado.setRecorridoMasRealizado(getRecorridoMasRealizado(recorridos));
+
+		// getManejadorArchivos().escribirYML(rutaSalida, resultado);
 	}
 }

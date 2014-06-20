@@ -18,12 +18,13 @@ public class ManejadorArchivosTest {
 			throws IOException {
 
 		// El registro recortado posee 15000 registros
-		String ruta = "data/recorrido-bicis-2013-recortado.csv";
+		String ruta = "data/recorridos-recortado.csv";
+		
 		ManejadorArchivos manejador = new ManejadorArchivos();
 
 		List<RecorridoPorBicicleta> recorridos = new ArrayList<RecorridoPorBicicleta>();
 
-		recorridos = manejador.leerCSV(ruta);
+		recorridos = manejador.obtenerRecorridos(ruta);
 
 		// Por el salteo del encabezado
 		int cantidadEsperada = 14999;

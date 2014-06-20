@@ -6,18 +6,29 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.lingala.zip4j.core.ZipFile;
+import net.lingala.zip4j.exception.ZipException;
+
 import org.ho.yaml.Yaml;
 
 import au.com.bytecode.opencsv.CSVReader;
 
 public class ManejadorArchivos {
 
-	public void escribirYML(String rutaSalida, Resultado resultado) throws IOException {
+	public void escribirYML(String rutaSalida, Resultado resultado)
+			throws IOException {
 
 		Yaml.dump(resultado, new File(rutaSalida));
 	}
 
-	public List<RecorridoPorBicicleta> leerCSV(String ruta) throws IOException {
+	public void extraer(File archivoZip) throws IOException, ZipException {
+
+		ZipFile zip = new ZipFile(archivoZip);
+		zip.extractAll("data/extracciones");
+		System.out.println("-- [Extraccion de Archivos finalizada]\n");
+	}
+
+	public List<RecorridoPorBicicleta> obtenerRecorridos(String ruta) throws IOException {
 
 		CSVReader reader = new CSVReader(new FileReader(ruta), ';');
 		
@@ -27,7 +38,7 @@ public class ManejadorArchivos {
 		String[] linea;
 
 		// Salteo la primer fila
-		 reader.readNext();
+		reader.readNext();
 
 		while ((linea = reader.readNext()) != null) {
 
