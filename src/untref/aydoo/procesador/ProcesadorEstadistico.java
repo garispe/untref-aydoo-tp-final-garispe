@@ -144,7 +144,7 @@ public class ProcesadorEstadistico {
 
 		resultado.setTiempoPromedioUso(getTiempoPromedioUso(recorridos));
 
-//		resultado.setRecorridoMasRealizado(getRecorridoMasRealizado(recorridos));
+		resultado.setRecorridoMasRealizado(getRecorridoMasRealizado(recorridos));
 
 		getManejadorArchivos().escribirYML(rutaSalida, resultado);
 
@@ -153,12 +153,5 @@ public class ProcesadorEstadistico {
 	public Resultado getResultado() {
 
 		return this.resultado;
-	}
-	
-	public static void main(String[] args) throws IOException, ZipException {
-
-		ProcesadorEstadistico procesador = new ProcesadorEstadistico();
-
-		procesador.imprimirResultado();
 	}
 }
