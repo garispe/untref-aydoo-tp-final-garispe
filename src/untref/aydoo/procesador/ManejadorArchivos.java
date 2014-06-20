@@ -25,21 +25,29 @@ public class ManejadorArchivos {
 
 		ZipFile zip = new ZipFile(archivoZip);
 		zip.extractAll("data/extracciones");
-		System.out.println("-- [Extraccion de Archivos finalizada]\n");
+		System.out.println("*** [Extraccion de Archivos finalizada] ***\n");
 	}
 
-	public List<RecorridoPorBicicleta> obtenerRecorridos(String ruta) throws IOException {
+	public List<RecorridoPorBicicleta> obtenerRecorridos(File archivo)
+			throws IOException, ZipException {
 
-		CSVReader reader = new CSVReader(new FileReader(ruta), ';');
-		
+		this.extraer(archivo);
+
 		List<RecorridoPorBicicleta> recorridos = new ArrayList<RecorridoPorBicicleta>();
 
-		// Linea por linea
-		String[] linea;
+		String csv_file = archivo.getName().substring(0,
+				archivo.getName().length() - 4)
+				+ ".csv"; // Se reemplaza la extension
+
+		CSVReader reader = new CSVReader(new FileReader("data/extracciones/" + csv_file), ';');
+		
 
 		// Salteo la primer fila
 		reader.readNext();
 
+		// Linea por linea
+		String[] linea;
+		
 		while ((linea = reader.readNext()) != null) {
 
 			RecorridoPorBicicleta recorrido = new RecorridoPorBicicleta();

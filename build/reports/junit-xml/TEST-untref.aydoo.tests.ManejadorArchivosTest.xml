@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="1" failures="0" hostname="skorpios" name="untref.aydoo.tests.ManejadorArchivosTest" tests="1" time="0.123" timestamp="2014-06-20T05:18:04">
+<testsuite errors="1" failures="0" hostname="skorpios" name="untref.aydoo.tests.ManejadorArchivosTest" tests="1" time="0.123" timestamp="2014-06-20T19:27:42">
   <properties>
     <property name="java.vendor" value="Oracle Corporation" />
     <property name="coverage.summaryxml.dir" value="/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/build/reports/cobertura-summary-xml" />
@@ -55,7 +55,7 @@
     <property name="java.vendor.url" value="http://java.oracle.com/" />
     <property name="java.vm.vendor" value="Oracle Corporation" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/junittestcases932491108155509872.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/build/reports/junit-xml/IGNORETHIS.xml crashfile=/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/junitvmwatcher5610009816469837662.properties propsfile=/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/junit2967730945827358028.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner testsfile=/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/junittestcases4205731498506258022.properties filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/build/reports/junit-xml/IGNORETHIS.xml crashfile=/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/junitvmwatcher6498292066565543429.properties propsfile=/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/junit648268551742454597.properties" />
     <property name="java.class.path" value="/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/build/instrumented:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/build:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs/asm-3.0.jar:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs/asm-tree-3.0.jar:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs/checkstyle-5.5-all.jar:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs/cobertura.jar:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs/jakarta-oro-2.0.8.jar:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs/junit-4.10.jar:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs/jyaml-1.3.jar:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs/log4j-1.2.9.jar:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs/mockito-all-1.9.0.jar:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs/opencsv-2.3.jar:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/libs/zip4j_1.3.2.jar:/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/build/tests:/usr/share/ant/lib/junit.jar:/usr/share/java/ant-launcher-1.8.2.jar:/usr/share/ant/lib/ant.jar:/usr/share/ant/lib/ant-junit.jar:/usr/share/ant/lib/ant-junit4.jar" />
     <property name="ant.version" value="Apache Ant(TM) version 1.8.2 compiled on December 3 2011" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
@@ -80,59 +80,64 @@
     <property name="src.dir" value="/home/guillermo/GUILLE/UNTREF/AyDOO/TP_FINAL/untref-aydoo-tp-final-garispe/src" />
     <property name="ant.project.invoked-targets" value="test" />
   </properties>
-  <testcase classname="untref.aydoo.tests.ManejadorArchivosTest" name="verificarQueElTamañoDeLaListaDeRecorridosEsElEsperado" time="0.016">
-    <error message="Instruction type does not match stack map&#xa;Exception Details:&#xa;  Location:&#xa;    untref/aydoo/procesador/ManejadorArchivos.obtenerRecorridos(Ljava/lang/String;)Ljava/util/List; @72: aload&#xa;  Reason:&#xa;    Type integer (current frame, locals[2]) is not assignable to &apos;au/com/bytecode/opencsv/CSVReader&apos; (stack map, locals[2])&#xa;  Current Frame:&#xa;    bci: @72&#xa;    flags: { }&#xa;    locals: { &apos;untref/aydoo/procesador/ManejadorArchivos&apos;, &apos;java/lang/String&apos;, integer, integer, &apos;au/com/bytecode/opencsv/CSVReader&apos;, &apos;java/util/ArrayList&apos; }&#xa;    stack: { }&#xa;  Stackmap Frame:&#xa;    bci: @72&#xa;    flags: { }&#xa;    locals: { &apos;untref/aydoo/procesador/ManejadorArchivos&apos;, &apos;java/lang/String&apos;, &apos;au/com/bytecode/opencsv/CSVReader&apos;, &apos;java/util/List&apos; }&#xa;    stack: { }&#xa;  Bytecode:&#xa;    0000000: 033d 11ff ff3e 120b 1100 21b8 0011 bb00&#xa;    0000010: 4f59 bb00 5159 2bb7 0052 103b b700 553a&#xa;    0000020: 0412 0b11 0023 b800 11bb 0057 59b7 0058&#xa;    0000030: 3a05 120b 1100 29b8 0011 1904 b600 5c57&#xa;    0000040: 120b 1100 2bb8 0011 1904 b600 5c59 3a06&#xa;    0000050: 1100 2b3d 1100 003e c601 1f1c 1100 2ba0&#xa;    0000060: 0016 1d11 0000 a000 0f12 0b1c 1d04 b800&#xa;    0000070: 6211 ffff 3e12 0b11 002d b800 11bb 0064&#xa;    0000080: 59b7 0065 3a07 120b 1100 31b8 0011 1907&#xa;    0000090: 1906 0332 b800 6bb6 006f 120b 1100 32b8&#xa;    00000a0: 0011 1907 1906 0432 b800 6bb6 0072 120b&#xa;    00000b0: 1100 34b8 0011 1907 1906 0532 b600 7512&#xa;    00000c0: 0b11 0035 b800 1119 0719 0606 32b8 006b&#xa;    00000d0: b800 79b6 007d 120b 1100 36b8 0011 1907&#xa;    00000e0: 1906 0732 b600 8012 0b11 0038 b800 1119&#xa;    00000f0: 0719 0608 32b6 0083 120b 1100 39b8 0011&#xa;    0000100: 1907 1906 1006 32b8 006b b800 79b6 0086&#xa;    0000110: 120b 1100 3ab8 0011 1907 1906 1007 32b6&#xa;    0000120: 0089 120b 1100 3cb8 0011 1907 1906 1008&#xa;    0000130: 32b8 006b b600 8c12 0b11 003e b800 1119&#xa;    0000140: 0519 07b9 0090 0200 5712 0b11 0044 b800&#xa;    0000150: 11a7 001b 120b 1100 41b8 0011 3a08 120b&#xa;    0000160: 1100 43b8 0011 1907 03b6 008c 120b 1100&#xa;    0000170: 45b8 0011 a7fe cc1d 9b00 0f12 0b1c 1d03&#xa;    0000180: b800 6211 ffff 3e12 0b11 0047 b800 1119&#xa;    0000190: 04b6 0097 120b 1100 49b8 0011 1905 b0  &#xa;  Exception Handler Table:&#xa;    bci [134, 329] =&gt; handler: 340&#xa;  Stackmap Table:&#xa;    append_frame(@72,Object[#79],Object[#94])&#xa;    full_frame(@348,{Object[#2],Object[#146],Object[#79],Object[#94],Object[#148],Object[#100]},{Object[#77]})&#xa;    chop_frame(@372,1)&#xa;    same_frame(@399)&#xa;" type="java.lang.VerifyError">java.lang.VerifyError: Instruction type does not match stack map
+  <testcase classname="untref.aydoo.tests.ManejadorArchivosTest" name="verificarQueElTamanioDeLaListaDeRecorridosEsElEsperado" time="0.015">
+    <error message="Instruction type does not match stack map&#xa;Exception Details:&#xa;  Location:&#xa;    untref/aydoo/procesador/ManejadorArchivos.obtenerRecorridos(Ljava/io/File;)Ljava/util/List; @149: aload&#xa;  Reason:&#xa;    Type integer (current frame, locals[2]) is not assignable to &apos;java/util/List&apos; (stack map, locals[2])&#xa;  Current Frame:&#xa;    bci: @149&#xa;    flags: { }&#xa;    locals: { &apos;untref/aydoo/procesador/ManejadorArchivos&apos;, &apos;java/io/File&apos;, integer, integer, &apos;java/util/ArrayList&apos;, &apos;java/lang/String&apos;, &apos;au/com/bytecode/opencsv/CSVReader&apos; }&#xa;    stack: { }&#xa;  Stackmap Frame:&#xa;    bci: @149&#xa;    flags: { }&#xa;    locals: { &apos;untref/aydoo/procesador/ManejadorArchivos&apos;, &apos;java/io/File&apos;, &apos;java/util/List&apos;, &apos;java/lang/String&apos;, &apos;au/com/bytecode/opencsv/CSVReader&apos; }&#xa;    stack: { }&#xa;  Bytecode:&#xa;    0000000: 033d 11ff ff3e 120b 1100 22b8 0011 2a2b&#xa;    0000010: b600 4f12 0b11 0024 b800 11bb 0051 59b7&#xa;    0000020: 0052 3a04 120b 1100 26b8 0011 bb00 5459&#xa;    0000030: b700 552b b600 5903 2bb6 0059 b600 5f07&#xa;    0000040: 64b6 0063 b600 6712 69b6 0067 b600 6c3a&#xa;    0000050: 0512 0b11 002a b800 11bb 006e 59bb 0070&#xa;    0000060: 59bb 0054 59b7 0055 1272 b600 6719 05b6&#xa;    0000070: 0067 b600 6cb7 0073 103b b700 763a 0612&#xa;    0000080: 0b11 002e b800 1119 06b6 007a 5712 0b11&#xa;    0000090: 0033 b800 1119 06b6 007a 593a 0711 0033&#xa;    00000a0: 3d11 0000 3ec6 011f 1c11 0033 a000 161d&#xa;    00000b0: 1100 00a0 000f 120b 1c1d 04b8 0080 11ff&#xa;    00000c0: ff3e 120b 1100 35b8 0011 bb00 8259 b700&#xa;    00000d0: 833a 0812 0b11 0039 b800 1119 0819 0703&#xa;    00000e0: 32b8 0089 b600 8d12 0b11 003a b800 1119&#xa;    00000f0: 0819 0704 32b8 0089 b600 9012 0b11 003c&#xa;    0000100: b800 1119 0819 0705 32b6 0093 120b 1100&#xa;    0000110: 3db8 0011 1908 1907 0632 b800 89b8 0097&#xa;    0000120: b600 9b12 0b11 003e b800 1119 0819 0707&#xa;    0000130: 32b6 009e 120b 1100 40b8 0011 1908 1907&#xa;    0000140: 0832 b600 a112 0b11 0041 b800 1119 0819&#xa;    0000150: 0710 0632 b800 89b8 0097 b600 a412 0b11&#xa;    0000160: 0042 b800 1119 0819 0710 0732 b600 a712&#xa;    0000170: 0b11 0044 b800 1119 0819 0710 0832 b800&#xa;    0000180: 89b6 00aa 120b 1100 46b8 0011 1904 1908&#xa;    0000190: b900 ae02 0057 120b 1100 4cb8 0011 a700&#xa;    00001a0: 1b12 0b11 0049 b800 113a 0912 0b11 004b&#xa;    00001b0: b800 1119 0803 b600 aa12 0b11 004d b800&#xa;    00001c0: 11a7 fecc 1d9b 000f 120b 1c1d 03b8 0080&#xa;    00001d0: 11ff ff3e 120b 1100 4fb8 0011 1906 b600&#xa;    00001e0: b312 0b11 0051 b800 1119 04b0          &#xa;  Exception Handler Table:&#xa;    bci [211, 406] =&gt; handler: 417&#xa;  Stackmap Table:&#xa;    append_frame(@149,Object[#124],Object[#91],Object[#110])&#xa;    full_frame(@425,{Object[#2],Object[#30],Object[#124],Object[#91],Object[#110],Object[#176],Object[#130]},{Object[#77]})&#xa;    chop_frame(@449,1)&#xa;    same_frame(@476)&#xa;" type="java.lang.VerifyError">java.lang.VerifyError: Instruction type does not match stack map
 Exception Details:
   Location:
-    untref/aydoo/procesador/ManejadorArchivos.obtenerRecorridos(Ljava/lang/String;)Ljava/util/List; @72: aload
+    untref/aydoo/procesador/ManejadorArchivos.obtenerRecorridos(Ljava/io/File;)Ljava/util/List; @149: aload
   Reason:
-    Type integer (current frame, locals[2]) is not assignable to &apos;au/com/bytecode/opencsv/CSVReader&apos; (stack map, locals[2])
+    Type integer (current frame, locals[2]) is not assignable to &apos;java/util/List&apos; (stack map, locals[2])
   Current Frame:
-    bci: @72
+    bci: @149
     flags: { }
-    locals: { &apos;untref/aydoo/procesador/ManejadorArchivos&apos;, &apos;java/lang/String&apos;, integer, integer, &apos;au/com/bytecode/opencsv/CSVReader&apos;, &apos;java/util/ArrayList&apos; }
+    locals: { &apos;untref/aydoo/procesador/ManejadorArchivos&apos;, &apos;java/io/File&apos;, integer, integer, &apos;java/util/ArrayList&apos;, &apos;java/lang/String&apos;, &apos;au/com/bytecode/opencsv/CSVReader&apos; }
     stack: { }
   Stackmap Frame:
-    bci: @72
+    bci: @149
     flags: { }
-    locals: { &apos;untref/aydoo/procesador/ManejadorArchivos&apos;, &apos;java/lang/String&apos;, &apos;au/com/bytecode/opencsv/CSVReader&apos;, &apos;java/util/List&apos; }
+    locals: { &apos;untref/aydoo/procesador/ManejadorArchivos&apos;, &apos;java/io/File&apos;, &apos;java/util/List&apos;, &apos;java/lang/String&apos;, &apos;au/com/bytecode/opencsv/CSVReader&apos; }
     stack: { }
   Bytecode:
-    0000000: 033d 11ff ff3e 120b 1100 21b8 0011 bb00
-    0000010: 4f59 bb00 5159 2bb7 0052 103b b700 553a
-    0000020: 0412 0b11 0023 b800 11bb 0057 59b7 0058
-    0000030: 3a05 120b 1100 29b8 0011 1904 b600 5c57
-    0000040: 120b 1100 2bb8 0011 1904 b600 5c59 3a06
-    0000050: 1100 2b3d 1100 003e c601 1f1c 1100 2ba0
-    0000060: 0016 1d11 0000 a000 0f12 0b1c 1d04 b800
-    0000070: 6211 ffff 3e12 0b11 002d b800 11bb 0064
-    0000080: 59b7 0065 3a07 120b 1100 31b8 0011 1907
-    0000090: 1906 0332 b800 6bb6 006f 120b 1100 32b8
-    00000a0: 0011 1907 1906 0432 b800 6bb6 0072 120b
-    00000b0: 1100 34b8 0011 1907 1906 0532 b600 7512
-    00000c0: 0b11 0035 b800 1119 0719 0606 32b8 006b
-    00000d0: b800 79b6 007d 120b 1100 36b8 0011 1907
-    00000e0: 1906 0732 b600 8012 0b11 0038 b800 1119
-    00000f0: 0719 0608 32b6 0083 120b 1100 39b8 0011
-    0000100: 1907 1906 1006 32b8 006b b800 79b6 0086
-    0000110: 120b 1100 3ab8 0011 1907 1906 1007 32b6
-    0000120: 0089 120b 1100 3cb8 0011 1907 1906 1008
-    0000130: 32b8 006b b600 8c12 0b11 003e b800 1119
-    0000140: 0519 07b9 0090 0200 5712 0b11 0044 b800
-    0000150: 11a7 001b 120b 1100 41b8 0011 3a08 120b
-    0000160: 1100 43b8 0011 1907 03b6 008c 120b 1100
-    0000170: 45b8 0011 a7fe cc1d 9b00 0f12 0b1c 1d03
-    0000180: b800 6211 ffff 3e12 0b11 0047 b800 1119
-    0000190: 04b6 0097 120b 1100 49b8 0011 1905 b0  
+    0000000: 033d 11ff ff3e 120b 1100 22b8 0011 2a2b
+    0000010: b600 4f12 0b11 0024 b800 11bb 0051 59b7
+    0000020: 0052 3a04 120b 1100 26b8 0011 bb00 5459
+    0000030: b700 552b b600 5903 2bb6 0059 b600 5f07
+    0000040: 64b6 0063 b600 6712 69b6 0067 b600 6c3a
+    0000050: 0512 0b11 002a b800 11bb 006e 59bb 0070
+    0000060: 59bb 0054 59b7 0055 1272 b600 6719 05b6
+    0000070: 0067 b600 6cb7 0073 103b b700 763a 0612
+    0000080: 0b11 002e b800 1119 06b6 007a 5712 0b11
+    0000090: 0033 b800 1119 06b6 007a 593a 0711 0033
+    00000a0: 3d11 0000 3ec6 011f 1c11 0033 a000 161d
+    00000b0: 1100 00a0 000f 120b 1c1d 04b8 0080 11ff
+    00000c0: ff3e 120b 1100 35b8 0011 bb00 8259 b700
+    00000d0: 833a 0812 0b11 0039 b800 1119 0819 0703
+    00000e0: 32b8 0089 b600 8d12 0b11 003a b800 1119
+    00000f0: 0819 0704 32b8 0089 b600 9012 0b11 003c
+    0000100: b800 1119 0819 0705 32b6 0093 120b 1100
+    0000110: 3db8 0011 1908 1907 0632 b800 89b8 0097
+    0000120: b600 9b12 0b11 003e b800 1119 0819 0707
+    0000130: 32b6 009e 120b 1100 40b8 0011 1908 1907
+    0000140: 0832 b600 a112 0b11 0041 b800 1119 0819
+    0000150: 0710 0632 b800 89b8 0097 b600 a412 0b11
+    0000160: 0042 b800 1119 0819 0710 0732 b600 a712
+    0000170: 0b11 0044 b800 1119 0819 0710 0832 b800
+    0000180: 89b6 00aa 120b 1100 46b8 0011 1904 1908
+    0000190: b900 ae02 0057 120b 1100 4cb8 0011 a700
+    00001a0: 1b12 0b11 0049 b800 113a 0912 0b11 004b
+    00001b0: b800 1119 0803 b600 aa12 0b11 004d b800
+    00001c0: 11a7 fecc 1d9b 000f 120b 1c1d 03b8 0080
+    00001d0: 11ff ff3e 120b 1100 4fb8 0011 1906 b600
+    00001e0: b312 0b11 0051 b800 1119 04b0          
   Exception Handler Table:
-    bci [134, 329] =&gt; handler: 340
+    bci [211, 406] =&gt; handler: 417
   Stackmap Table:
-    append_frame(@72,Object[#79],Object[#94])
-    full_frame(@348,{Object[#2],Object[#146],Object[#79],Object[#94],Object[#148],Object[#100]},{Object[#77]})
-    chop_frame(@372,1)
-    same_frame(@399)
+    append_frame(@149,Object[#124],Object[#91],Object[#110])
+    full_frame(@425,{Object[#2],Object[#30],Object[#124],Object[#91],Object[#110],Object[#176],Object[#130]},{Object[#77]})
+    chop_frame(@449,1)
+    same_frame(@476)
 
-	at untref.aydoo.tests.ManejadorArchivosTest.verificarQueElTamañoDeLaListaDeRecorridosEsElEsperado(ManejadorArchivosTest.java:23)
+	at untref.aydoo.tests.ManejadorArchivosTest.verificarQueElTamanioDeLaListaDeRecorridosEsElEsperado(ManejadorArchivosTest.java:25)
 </error>
   </testcase>
   <system-out><![CDATA[]]></system-out>

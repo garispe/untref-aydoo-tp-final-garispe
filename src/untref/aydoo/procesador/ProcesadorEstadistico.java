@@ -1,5 +1,6 @@
 package untref.aydoo.procesador;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -97,8 +98,7 @@ public class ProcesadorEstadistico {
 		return tiempoTotal / recorridos.size();
 	}
 
-	public String getRecorridoMasRealizado(
-			List<RecorridoPorBicicleta> recorridos) {
+	public String getRecorridoMasRealizado(	List<RecorridoPorBicicleta> recorridos) {
 
 		String recorridoMasRealizado = "---";
 		String parOrigenDestinoAuxiliar;
@@ -131,12 +131,11 @@ public class ProcesadorEstadistico {
 
 	public void imprimirResultado() throws IOException, ZipException {
 
-		// String rutaSalida = "data/test.yml";
-
-		// getManejadorArchivos().extraer(new File("data/recorridos-2013.zip"));
-
-		List<RecorridoPorBicicleta> recorridos = getManejadorArchivos()
-				.obtenerRecorridos("data/recorridos-recortado.csv");
+		String rutaSalida = "data/test.yml";
+		File archivo = new File("data/recorridos-15000.zip");
+		
+		List<RecorridoPorBicicleta> recorridos = getManejadorArchivos().obtenerRecorridos(archivo);
+		
 		resultado = new Resultado();
 
 		resultado.setID_bicicletaMasUsada(getBicicletaMasUsada(recorridos));
@@ -145,8 +144,21 @@ public class ProcesadorEstadistico {
 
 		resultado.setTiempoPromedioUso(getTiempoPromedioUso(recorridos));
 
-		resultado.setRecorridoMasRealizado(getRecorridoMasRealizado(recorridos));
+//		resultado.setRecorridoMasRealizado(getRecorridoMasRealizado(recorridos));
 
-		// getManejadorArchivos().escribirYML(rutaSalida, resultado);
+		getManejadorArchivos().escribirYML(rutaSalida, resultado);
+
+	}
+
+	public Resultado getResultado() {
+
+		return this.resultado;
+	}
+	
+	public static void main(String[] args) throws IOException, ZipException {
+
+		ProcesadorEstadistico procesador = new ProcesadorEstadistico();
+
+		procesador.imprimirResultado();
 	}
 }
