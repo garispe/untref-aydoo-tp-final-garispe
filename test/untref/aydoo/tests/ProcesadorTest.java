@@ -1,11 +1,9 @@
 package untref.aydoo.tests;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import junit.framework.Assert;
-import net.lingala.zip4j.exception.ZipException;
 
 import org.junit.Test;
 
@@ -15,14 +13,6 @@ import untref.aydoo.procesador.RecorridoPorBicicleta;
 public class ProcesadorTest {
 
 	@Test
-	public void probarTiempo() throws IOException, ZipException {
-
-		ProcesadorEstadistico p = new ProcesadorEstadistico();
-
-		p.imprimirResultado();
-	}
-
-//	@Test
 	public void elRecorridoMasRealizadoDeberiaSerElEsperadoSegunLosRecorridosCargados() {
 
 		ProcesadorEstadistico procesador = new ProcesadorEstadistico();
@@ -60,7 +50,7 @@ public class ProcesadorTest {
 				procesador.getRecorridoMasRealizado(recorridos));
 	}
 
-//	@Test
+	@Test
 	public void laBicicletaMasUsadaDeberiaSerLaEsperadaSegunLosRecorridosCargados() {
 
 		ProcesadorEstadistico procesador = new ProcesadorEstadistico();
@@ -93,7 +83,7 @@ public class ProcesadorTest {
 				procesador.getBicicletaMasUsada(recorridos));
 	}
 
-//	@Test
+	@Test
 	public void laBicicletaMenosUsadaDeberiaSerLaEsperadaSegunLosRecorridosCargados() {
 
 		ProcesadorEstadistico procesador = new ProcesadorEstadistico();
@@ -126,7 +116,7 @@ public class ProcesadorTest {
 				procesador.getBicicletaMenosUsada(recorridos));
 	}
 
-//	@Test
+	@Test
 	public void elTiempoDeberiaSerElEsperadoSegunLosRecorridosCargados() {
 
 		ProcesadorEstadistico procesador = new ProcesadorEstadistico();

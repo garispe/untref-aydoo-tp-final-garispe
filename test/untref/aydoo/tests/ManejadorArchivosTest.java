@@ -27,7 +27,7 @@ public class ManejadorArchivosTest {
 		List<RecorridoPorBicicleta> recorridos = new ArrayList<RecorridoPorBicicleta>();
 
 		recorridos = manejador.obtenerRecorridos(archivo);
-		
+
 		// Por el salteo del encabezado
 		int cantidadEsperada = 14999;
 
