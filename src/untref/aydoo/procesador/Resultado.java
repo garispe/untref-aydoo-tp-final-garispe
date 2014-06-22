@@ -5,7 +5,7 @@ public class Resultado {
 	private int ID_bicicletaMasUsada;
 	private int ID_bicicletaMenosUsada;
 	private String recorridoMasRealizado;
-	private double tiempoPromedioUso;
+	private float tiempoPromedioUso;
 
 	public int getID_bicicletaMasUsada() {
 		return ID_bicicletaMasUsada;
@@ -31,11 +31,11 @@ public class Resultado {
 		this.recorridoMasRealizado = recorridoMasRealizado;
 	}
 
-	public double getTiempoPromedioUso() {
+	public float getTiempoPromedioUso() {
 		return tiempoPromedioUso;
 	}
 
-	public void setTiempoPromedioUso(double tiempoPromedioUso) {
+	public void setTiempoPromedioUso(float tiempoPromedioUso) {
 		this.tiempoPromedioUso = tiempoPromedioUso;
 	}
 

@@ -47,17 +47,17 @@ public class ProcesadorEstadistico {
 				ID_bicicletaMasUsada = ID_auxiliar;
 
 			}
-			// COMPARAR POR TIEMPOS EN CASO DE SER IGUALES, O CANTIDAD = 0
 		}
 
+		System.out.println(ID_bicicletaMasUsada);
 		return ID_bicicletaMasUsada;
 	}
 
 	public int getBicicletaMenosUsada(List<RecorridoPorBicicleta> recorridos) {
 
-		int id_bicicletaMenosUsada = 0;
+		int ID_bicicletaMenosUsada = 0;
 		int minimo = recorridos.size();
-		int ID_auxiliar;
+		int ID_auxiliar = 0;
 		int cantidadIguales;
 
 		for (int i = 0; i < recorridos.size(); i++) {
@@ -76,25 +76,28 @@ public class ProcesadorEstadistico {
 			if (cantidadIguales < minimo) {
 
 				minimo = cantidadIguales;
-				id_bicicletaMenosUsada = ID_auxiliar;
+				ID_bicicletaMenosUsada = ID_auxiliar;
 			}
-
-			// COMPARAR POR TIEMPOS EN CASO DE SER IGUALES, O CANTIDAD = 0
 		}
 
-		return id_bicicletaMenosUsada;
+		System.out.println(ID_bicicletaMenosUsada);
+		return ID_bicicletaMenosUsada;
 	}
 
-	public double getTiempoPromedioUso(List<RecorridoPorBicicleta> recorridos) {
+	public float getTiempoPromedioUso(List<RecorridoPorBicicleta> recorridos) {
 
-		double tiempoTotal = 0.0;
+		float tiempoTotal = .0f;
+		float tiempoPromedio = .0f;
 
 		for (int i = 0; i < recorridos.size(); i++) {
 
 			tiempoTotal = tiempoTotal + recorridos.get(i).getTiempoUso();
 		}
 
-		return tiempoTotal / recorridos.size();
+		tiempoPromedio = tiempoTotal / recorridos.size();
+
+		System.out.println(tiempoPromedio);
+		return (tiempoPromedio);
 	}
 
 	public String getRecorridoMasRealizado(
@@ -128,14 +131,14 @@ public class ProcesadorEstadistico {
 			}
 		}
 
+		System.out.println(recorridoMasRealizado);
 		return recorridoMasRealizado;
 	}
 
 	public void imprimirResultado() throws IOException, ZipException {
 
 		String rutaSalida = "data/test.yml";
-		File archivo = new File("data/recorridos-2013-aux.zip");
-
+		File archivo = new File("data/recorridos-5000.zip");
 		List<RecorridoPorBicicleta> recorridos = getManejadorArchivos()
 				.obtenerRecorridos(archivo);
 
@@ -147,14 +150,10 @@ public class ProcesadorEstadistico {
 
 		resultado.setTiempoPromedioUso(getTiempoPromedioUso(recorridos));
 
-		resultado.setRecorridoMasRealizado(getRecorridoMasRealizado(recorridos));
+		resultado
+				.setRecorridoMasRealizado(getRecorridoMasRealizado(recorridos));
 
 		getManejadorArchivos().escribirYML(rutaSalida, resultado);
 
-	}
-
-	public Resultado getResultado() {
-
-		return this.resultado;
 	}
 }
