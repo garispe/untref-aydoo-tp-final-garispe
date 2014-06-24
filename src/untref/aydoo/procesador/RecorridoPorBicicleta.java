@@ -12,11 +12,13 @@ public class RecorridoPorBicicleta {
 	private String fechaDestino;
 	private Integer ID_estacionDestino;
 	private String nombreDestino;
-	
+
 	private int tiempoUso;
 
 	public String getParOrigenDestino() {
-		return ID_estacionOrigen.toString().concat("-" + ID_estacionDestino.toString());
+		return ID_estacionOrigen.toString().concat(
+				": " + nombreOrigen + " - " + ID_estacionDestino.toString()
+						+ ": " + nombreDestino);
 	}
 
 	public int getID_usuario() {

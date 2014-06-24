@@ -9,7 +9,7 @@ import net.lingala.zip4j.exception.ZipException;
 public class ProcesadorEstadistico {
 
 	private ManejadorArchivos manejadorArchivos;
-	private Resultado resultado;
+	private List<RecorridoPorBicicleta> recorridos;
 
 	public ProcesadorEstadistico() {
 
@@ -21,7 +21,13 @@ public class ProcesadorEstadistico {
 		return this.manejadorArchivos;
 	}
 
-	public int getBicicletaMasUsada(List<RecorridoPorBicicleta> recorridos) {
+	public void cargarRecorridos(String dir) throws IOException, ZipException {
+
+		this.recorridos = this.manejadorArchivos
+				.obtenerRecorridos(new File(dir));
+	}
+
+	public int getBicicletaMasUsada() {
 
 		int ID_bicicletaMasUsada = 0;
 		int maximo = 0;
@@ -48,12 +54,10 @@ public class ProcesadorEstadistico {
 
 			}
 		}
-
-		System.out.println(ID_bicicletaMasUsada);
 		return ID_bicicletaMasUsada;
 	}
 
-	public int getBicicletaMenosUsada(List<RecorridoPorBicicleta> recorridos) {
+	public int getBicicletaMenosUsada() {
 
 		int ID_bicicletaMenosUsada = 0;
 		int minimo = recorridos.size();
@@ -79,15 +83,13 @@ public class ProcesadorEstadistico {
 				ID_bicicletaMenosUsada = ID_auxiliar;
 			}
 		}
-
-		System.out.println(ID_bicicletaMenosUsada);
 		return ID_bicicletaMenosUsada;
 	}
 
-	public float getTiempoPromedioUso(List<RecorridoPorBicicleta> recorridos) {
+	public double getTiempoPromedioUso() {
 
-		float tiempoTotal = .0f;
-		float tiempoPromedio = .0f;
+		double tiempoTotal = .0f;
+		double tiempoPromedio = .0f;
 
 		for (int i = 0; i < recorridos.size(); i++) {
 
@@ -96,14 +98,12 @@ public class ProcesadorEstadistico {
 
 		tiempoPromedio = tiempoTotal / recorridos.size();
 
-		System.out.println(tiempoPromedio);
 		return (tiempoPromedio);
 	}
 
-	public String getRecorridoMasRealizado(
-			List<RecorridoPorBicicleta> recorridos) {
+	public String getRecorridoMasRealizado() {
 
-		String recorridoMasRealizado = "---";
+		RecorridoPorBicicleta recorridoMasRealizado = null;
 		RecorridoPorBicicleta recorridoAuxiliar;
 		int maximo = 0;
 		int cantidadIguales;
@@ -127,33 +127,29 @@ public class ProcesadorEstadistico {
 			if (cantidadIguales > maximo) {
 
 				maximo = cantidadIguales;
-				recorridoMasRealizado = recorridoAuxiliar.getParOrigenDestino();
+				recorridoMasRealizado = recorridoAuxiliar;
 			}
 		}
-
-		System.out.println(recorridoMasRealizado);
-		return recorridoMasRealizado;
+		return recorridoMasRealizado.getParOrigenDestino();
 	}
 
-	public void imprimirResultado() throws IOException, ZipException {
+	public Resultado getResultado() {
 
-		String rutaSalida = "data/test.yml";
-		File archivo = new File("data/recorridos-5000.zip");
-		List<RecorridoPorBicicleta> recorridos = getManejadorArchivos()
-				.obtenerRecorridos(archivo);
+		int id_bicicletaMasUsada = getBicicletaMasUsada();
+		int id_bicicletaMenosUsada = getBicicletaMenosUsada();
+		String recorridoMasRealizado = getRecorridoMasRealizado();
+		double tiempoPromedio = getTiempoPromedioUso();
 
-		resultado = new Resultado();
+		Resultado resultado = new Resultado(id_bicicletaMasUsada,
+				id_bicicletaMenosUsada, recorridoMasRealizado, tiempoPromedio);
 
-		resultado.setID_bicicletaMasUsada(getBicicletaMasUsada(recorridos));
+		return resultado;
+	}
 
-		resultado.setID_bicicletaMenosUsada(getBicicletaMenosUsada(recorridos));
+	public void generarYMLConResultado(String dir) throws IOException,
+			ZipException {
 
-		resultado.setTiempoPromedioUso(getTiempoPromedioUso(recorridos));
-
-		resultado
-				.setRecorridoMasRealizado(getRecorridoMasRealizado(recorridos));
-
-		getManejadorArchivos().escribirYML(rutaSalida, resultado);
+		getManejadorArchivos().escribirYML(dir, getResultado());
 
 	}
 }

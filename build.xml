@@ -1,4 +1,4 @@
-<project name="proyecto-java-aydoo" basedir="." default="test">
+<project name="proyecto-java" basedir="." default="test">
 	<property name="build" location="build" />
 	<property name="libs" location="libs" />
 	<property name="classes.dir" location="build" />
@@ -37,7 +37,7 @@
 
 	<target name="compilar.aplicacion" depends="setup">
 		<javac srcdir="src" destdir="${build}" includeantruntime="false" debug="yes" target="1.7">
-			<classpath refid="classpath" />
+                        <classpath refid="classpath" />
 		</javac>
 	</target>
 
@@ -50,13 +50,13 @@
 
 	<target name="ejecutar.tests" depends="compilar.tests">
 		<junit fork="yes" failureProperty="test.failure"  forkmode="once">
-			<!-- <classpath refid="classpath" /> -->
+			<classpath refid="classpath" />
 			<sysproperty key="net.sourceforge.cobertura.datafile"
 					file="${build}/cobertura.ser" />
 			<classpath location="${instrumented.dir}" />
 			<classpath location="${build}" />
 			<classpath refid="cobertura.classpath" />
-			<classpath refid="classpath" />
+<!--			<classpath refid="classpath" /> -->
 			<formatter type="xml" />
 			<test name="${testcase}" todir="${reports.xml.dir}" if="testcase" />
 			<batchtest todir="${reports.xml.dir}" unless="testcase">

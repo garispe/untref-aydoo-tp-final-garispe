@@ -39,15 +39,15 @@ public class ManejadorArchivos {
 				archivo.getName().length() - 4)
 				+ ".csv"; // Se reemplaza la extension
 
-		CSVReader reader = new CSVReader(new FileReader("data/extracciones/" + csv_file), ';');
-		
+		CSVReader reader = new CSVReader(new FileReader("data/extracciones/"
+				+ csv_file), ';');
 
 		// Salteo la primer fila
 		reader.readNext();
 
 		// Linea por linea
 		String[] linea;
-		
+
 		while ((linea = reader.readNext()) != null) {
 
 			RecorridoPorBicicleta recorrido = new RecorridoPorBicicleta();
@@ -69,7 +69,7 @@ public class ManejadorArchivos {
 
 				recorridos.add(recorrido);
 
-			// Por lineas con errores en ultimo campo
+				// Por lineas con errores en ultimo campo
 			} catch (NumberFormatException e) {
 
 				recorrido.setTiempoUso(0);
