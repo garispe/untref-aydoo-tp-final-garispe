@@ -1,0 +1,6 @@
+RESTRICCION:
+-----------
+
+Al no lograr optimizar los algoritmos de manera eficiente, aparece la siguiente restricción:
+
+- Si la cantidad de registros a procesar supera los 60.000 aproximadamente, teniendo en cuenta todos los archivos '.csv', la obtención del resultado se da en un periodo de tiempo muy largo.
