@@ -16,8 +16,8 @@ public class ProcesadorEstadisticoTest {
 	public void laBicicletaMasUsadaDeberiaSerLaEsperadaSegunLosRecorridosCargados()
 			throws IOException, ZipException {
 
-		ProcesadorEstadistico procesador = new ProcesadorEstadistico();
-		procesador.cargarRecorridos("data/zip_prueba.zip");
+		ProcesadorEstadistico procesador = new ProcesadorEstadistico("data");
+		procesador.cargarRecorridos();
 
 		int ID_esparado = 1205;
 
@@ -28,8 +28,8 @@ public class ProcesadorEstadisticoTest {
 	public void laBicicletaMenosUsadaDeberiaSerLaEsperadaSegunLosRecorridosCargados()
 			throws IOException, ZipException {
 
-		ProcesadorEstadistico procesador = new ProcesadorEstadistico();
-		procesador.cargarRecorridos("data/zip_prueba.zip");
+		ProcesadorEstadistico procesador = new ProcesadorEstadistico("data");
+		procesador.cargarRecorridos();
 
 		int ID_esparado = 1524;
 
@@ -40,8 +40,8 @@ public class ProcesadorEstadisticoTest {
 	public void elTiempoPromedioDeberiaSerElEsperadoSegunLosRecorridosCargados()
 			throws IOException, ZipException {
 
-		ProcesadorEstadistico procesador = new ProcesadorEstadistico();
-		procesador.cargarRecorridos("data/zip_prueba.zip");
+		ProcesadorEstadistico procesador = new ProcesadorEstadistico("data");
+		procesador.cargarRecorridos();
 
 		double tiempoEsperado = 29.88888888888889;
 
@@ -52,8 +52,8 @@ public class ProcesadorEstadisticoTest {
 	public void elRecorridoMasRealizadoDeberiaSerElEsperadoSegunLosRecorridosCargados()
 			throws IOException, ZipException {
 
-		ProcesadorEstadistico procesador = new ProcesadorEstadistico();
-		procesador.cargarRecorridos("data/zip_prueba.zip");
+		ProcesadorEstadistico procesador = new ProcesadorEstadistico("data");
+		procesador.cargarRecorridos();
 
 		String recorridoEsperado = "20: ONCE - 7: PLAZA ROMA";
 
@@ -65,8 +65,8 @@ public class ProcesadorEstadisticoTest {
 	public void elResultadoDeberiaSerElEsperado() throws IOException,
 			ZipException {
 
-		ProcesadorEstadistico procesador = new ProcesadorEstadistico();
-		procesador.cargarRecorridos("data/zip_prueba.zip");
+		ProcesadorEstadistico procesador = new ProcesadorEstadistico("data");
+		procesador.cargarRecorridos();
 
 		int id_bicicletaMasUsadaEsparado = 1205;
 		int id_bicicletaMenosUsadaEsperado = 1524;

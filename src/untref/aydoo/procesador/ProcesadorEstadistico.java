@@ -2,29 +2,27 @@ package untref.aydoo.procesador;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import net.lingala.zip4j.exception.ZipException;
 
 public class ProcesadorEstadistico {
 
+	private File directorio;
 	private ManejadorArchivos manejadorArchivos;
 	private List<RecorridoPorBicicleta> recorridos;
 
-	public ProcesadorEstadistico() {
+	public ProcesadorEstadistico(String rutaDirectorio) {
 
+		this.directorio = new File(rutaDirectorio);
 		this.manejadorArchivos = new ManejadorArchivos();
+		this.recorridos = new ArrayList<RecorridoPorBicicleta>();
 	}
 
-	public ManejadorArchivos getManejadorArchivos() {
+	public void cargarRecorridos() throws IOException, ZipException {
 
-		return this.manejadorArchivos;
-	}
-
-	public void cargarRecorridos(String dir) throws IOException, ZipException {
-
-		this.recorridos = this.manejadorArchivos
-				.obtenerRecorridos(new File(dir));
+		this.recorridos = this.manejadorArchivos.cargarRecorridos(directorio);
 	}
 
 	public int getBicicletaMasUsada() {
@@ -146,10 +144,9 @@ public class ProcesadorEstadistico {
 		return resultado;
 	}
 
-	public void generarYMLConResultado(String dir) throws IOException,
-			ZipException {
+	public void generarYMLConResultado() throws IOException, ZipException {
 
-		getManejadorArchivos().escribirYML(dir, getResultado());
+		this.manejadorArchivos.escribirYML(getResultado());
 
 	}
 }

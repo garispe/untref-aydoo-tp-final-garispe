@@ -19,17 +19,16 @@ public class ManejadorArchivosTest {
 	public void verificarQueElTamanioDeLaListaDeRecorridosEsElEsperado()
 			throws IOException, ZipException {
 
-		// El registro recortado posee 15000 registros
-		File archivo = new File("data/recorridos-15000.zip");
+		File dir = new File("data");
 
 		ManejadorArchivos manejador = new ManejadorArchivos();
 
 		List<RecorridoPorBicicleta> recorridos = new ArrayList<RecorridoPorBicicleta>();
 
-		recorridos = manejador.obtenerRecorridos(archivo);
+		recorridos = manejador.cargarRecorridos(dir);
 
-		// Por el salteo del encabezado
-		int cantidadEsperada = 14999;
+		// Zip de prueba con 10 registros, por el salteo del encabezado es 9
+		int cantidadEsperada = 9;
 
 		Assert.assertEquals(cantidadEsperada, recorridos.size());
 	}

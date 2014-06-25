@@ -17,6 +17,10 @@ public class Resultado {
 
 	}
 
+	public Resultado() {
+
+	}
+
 	public int getID_bicicletaMasUsada() {
 		return ID_bicicletaMasUsada;
 	}

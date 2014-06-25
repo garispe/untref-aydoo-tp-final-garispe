@@ -15,37 +15,73 @@ import au.com.bytecode.opencsv.CSVReader;
 
 public class ManejadorArchivos {
 
-	public void escribirYML(String rutaSalida, Resultado resultado)
-			throws IOException {
+	File directorio;
 
-		Yaml.dump(resultado, new File(rutaSalida));
+	public void escribirYML(Resultado resultado) throws IOException {
+
+		Yaml.dump(resultado, new File(directorio.getName() + "/resultado.yml"));
 	}
 
-	public void extraer(File archivoZip) throws IOException, ZipException {
+	public void descomprimirZIP(File archivo) throws IOException, ZipException {
 
-		ZipFile zip = new ZipFile(archivoZip);
-		zip.extractAll("data/extracciones");
+		ZipFile zip = new ZipFile(archivo);
+		zip.extractAll(directorio.getPath());
 		System.out.println("*** [Extraccion de Archivos finalizada] ***\n");
 	}
 
-	public List<RecorridoPorBicicleta> obtenerRecorridos(File archivo)
+	public List<RecorridoPorBicicleta> cargarRecorridos(File directorio)
+			throws ZipException, IOException {
+
+		this.directorio = directorio;
+
+		File[] archivos;
+		List<RecorridoPorBicicleta> recorridos = new ArrayList<RecorridoPorBicicleta>();
+
+		archivos = directorio.listFiles();
+
+		for (int i = 0; i < archivos.length; i++) {
+
+			if (archivos[i].isFile() && archivos[i].getName().endsWith(".zip")) {
+
+				recorridos.addAll(this.obtenerRecorridos(archivos[i]));
+			}
+		}
+
+		return recorridos;
+	}
+
+	public List<RecorridoPorBicicleta> obtenerRecorridos(File archivoZip)
 			throws IOException, ZipException {
 
-		this.extraer(archivo);
+		List<RecorridoPorBicicleta> recorridos = new ArrayList<RecorridoPorBicicleta>();
+		File[] archivos;
+
+		descomprimirZIP(archivoZip);
+
+		archivos = directorio.listFiles();
+
+		for (int i = 0; i < archivos.length; i++) {
+
+			if (archivos[i].isFile() && archivos[i].getName().endsWith(".csv")) {
+
+				recorridos.addAll(this.parsearCSV(archivos[i]));
+			}
+		}
+
+		return recorridos;
+
+	}
+
+	public List<RecorridoPorBicicleta> parsearCSV(File archivo)
+			throws IOException, ZipException {
 
 		List<RecorridoPorBicicleta> recorridos = new ArrayList<RecorridoPorBicicleta>();
 
-		String csv_file = archivo.getName().substring(0,
-				archivo.getName().length() - 4)
-				+ ".csv"; // Se reemplaza la extension
-
-		CSVReader reader = new CSVReader(new FileReader("data/extracciones/"
-				+ csv_file), ';');
+		CSVReader reader = new CSVReader(new FileReader(archivo), ';');
 
 		// Salteo la primer fila
 		reader.readNext();
 
-		// Linea por linea
 		String[] linea;
 
 		while ((linea = reader.readNext()) != null) {
@@ -80,4 +116,5 @@ public class ManejadorArchivos {
 
 		return recorridos;
 	}
+
 }
