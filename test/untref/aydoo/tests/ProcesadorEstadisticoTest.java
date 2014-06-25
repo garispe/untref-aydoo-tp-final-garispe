@@ -8,6 +8,7 @@ import net.lingala.zip4j.exception.ZipException;
 import org.junit.Test;
 
 import untref.aydoo.procesador.ProcesadorEstadistico;
+import untref.aydoo.procesador.ProcesadorMain;
 import untref.aydoo.procesador.Resultado;
 
 public class ProcesadorEstadisticoTest {
@@ -84,5 +85,53 @@ public class ProcesadorEstadisticoTest {
 		Assert.assertEquals(tiempoPromedioEsperado,
 				resultado.getTiempoPromedioUso());
 
+	}
+
+	@Test
+	public void esDaemonDeberiaDevolverFalsoSiElArgumentoEsVacio()
+			throws IOException, ZipException {
+
+		String[] argumentos = { "data", "" };
+
+		ProcesadorMain.main(argumentos);
+
+		Assert.assertFalse(ProcesadorMain.getProcesadorEstadistico()
+				.esModoDaemon());
+	}
+
+	@Test
+	public void esDaemonDeberiaDevolverFalsoSiElArgumentoEsDistintoDeLoEspecificado()
+			throws IOException, ZipException {
+
+		String[] argumentos = { "data", "-onDemand" };
+
+		ProcesadorMain.main(argumentos);
+
+		Assert.assertFalse(ProcesadorMain.getProcesadorEstadistico()
+				.esModoDaemon());
+	}
+
+	@Test
+	public void esDaemonDeberiaDevolverVerdaderSiElArgumentoEsGuionD()
+			throws IOException, ZipException {
+
+		String[] argumentos = { "data", "-d" };
+
+		ProcesadorMain.main(argumentos);
+
+		Assert.assertTrue(ProcesadorMain.getProcesadorEstadistico()
+				.esModoDaemon());
+	}
+
+	@Test
+	public void esDaemonDeberiaDevolverVerdaderSiElArgumentoEsGuionDaemon()
+			throws IOException, ZipException {
+
+		String[] argumentos = { "data", "-daemon" };
+
+		ProcesadorMain.main(argumentos);
+
+		Assert.assertTrue(ProcesadorMain.getProcesadorEstadistico()
+				.esModoDaemon());
 	}
 }

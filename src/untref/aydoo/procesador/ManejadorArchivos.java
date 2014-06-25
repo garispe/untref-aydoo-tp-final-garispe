@@ -17,6 +17,11 @@ public class ManejadorArchivos {
 
 	File directorio;
 
+	public ManejadorArchivos(String rutaDir) {
+
+		this.directorio = new File(rutaDir);
+	}
+
 	public void escribirYML(Resultado resultado) throws IOException {
 
 		Yaml.dump(resultado, new File(directorio.getName() + "/resultado.yml"));
@@ -29,10 +34,24 @@ public class ManejadorArchivos {
 		System.out.println("*** [Extraccion de Archivos finalizada] ***\n");
 	}
 
-	public List<RecorridoPorBicicleta> cargarRecorridos(File directorio)
-			throws ZipException, IOException {
+	public List<File> getListaZIPs() {
 
-		this.directorio = directorio;
+		File[] archivos = directorio.listFiles();
+		List<File> ZIPs = new ArrayList<File>();
+
+		for (int i = 0; i < archivos.length; i++) {
+
+			if (archivos[i].isFile() && archivos[i].getName().endsWith(".zip")) {
+
+				ZIPs.add(archivos[i]);
+			}
+		}
+
+		return ZIPs;
+	}
+
+	public List<RecorridoPorBicicleta> cargarRecorridos() throws ZipException,
+			IOException {
 
 		File[] archivos;
 		List<RecorridoPorBicicleta> recorridos = new ArrayList<RecorridoPorBicicleta>();

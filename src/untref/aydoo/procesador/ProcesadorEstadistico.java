@@ -3,26 +3,36 @@ package untref.aydoo.procesador;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import net.lingala.zip4j.exception.ZipException;
 
 public class ProcesadorEstadistico {
 
-	private File directorio;
 	private ManejadorArchivos manejadorArchivos;
 	private List<RecorridoPorBicicleta> recorridos;
+	private boolean daemon;
 
 	public ProcesadorEstadistico(String rutaDirectorio) {
 
-		this.directorio = new File(rutaDirectorio);
-		this.manejadorArchivos = new ManejadorArchivos();
+		this.manejadorArchivos = new ManejadorArchivos(rutaDirectorio);
 		this.recorridos = new ArrayList<RecorridoPorBicicleta>();
 	}
 
 	public void cargarRecorridos() throws IOException, ZipException {
 
-		this.recorridos = this.manejadorArchivos.cargarRecorridos(directorio);
+		this.recorridos = this.manejadorArchivos.cargarRecorridos();
+	}
+
+	public void setDaemon(boolean daemon) {
+
+		this.daemon = daemon;
+	}
+
+	public boolean esModoDaemon() {
+
+		return this.daemon;
 	}
 
 	public int getBicicletaMasUsada() {
@@ -144,9 +154,46 @@ public class ProcesadorEstadistico {
 		return resultado;
 	}
 
-	public void generarYMLConResultado() throws IOException, ZipException {
+	public void generarYMLConResultado(Resultado resultado) throws IOException,
+			ZipException {
 
-		this.manejadorArchivos.escribirYML(getResultado());
+		this.manejadorArchivos.escribirYML(resultado);
 
+	}
+
+	public void borrarRecorridosCargados() {
+
+		this.recorridos.clear();
+	}
+
+	public void modoDaemon() throws IOException, ZipException {
+
+		this.recorridos = new ArrayList<RecorridoPorBicicleta>();
+		List<File> ZIPs = this.manejadorArchivos.getListaZIPs();
+
+		Iterator<File> itZips = ZIPs.iterator();
+
+		while (itZips.hasNext()) {
+
+			File archivoZip = itZips.next();
+
+			this.recorridos.addAll(this.manejadorArchivos
+					.obtenerRecorridos(archivoZip));
+
+			Resultado resultado = this.getResultado();
+
+			this.generarYMLConResultado(resultado);
+
+			this.borrarRecorridosCargados();
+		}
+	}
+
+	public void modoOnDemand() throws IOException, ZipException {
+
+		this.cargarRecorridos();
+
+		Resultado resultado = this.getResultado();
+
+		this.generarYMLConResultado(resultado);
 	}
 }

@@ -1,6 +1,5 @@
 package untref.aydoo.tests;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,13 +18,11 @@ public class ManejadorArchivosTest {
 	public void verificarQueElTamanioDeLaListaDeRecorridosEsElEsperado()
 			throws IOException, ZipException {
 
-		File dir = new File("data");
-
-		ManejadorArchivos manejador = new ManejadorArchivos();
+		ManejadorArchivos manejador = new ManejadorArchivos("data");
 
 		List<RecorridoPorBicicleta> recorridos = new ArrayList<RecorridoPorBicicleta>();
 
-		recorridos = manejador.cargarRecorridos(dir);
+		recorridos = manejador.cargarRecorridos();
 
 		// Zip de prueba con 10 registros, por el salteo del encabezado es 9
 		int cantidadEsperada = 9;
