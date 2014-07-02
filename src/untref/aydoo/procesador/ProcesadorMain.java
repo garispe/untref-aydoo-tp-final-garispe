@@ -12,7 +12,7 @@ public class ProcesadorMain {
 
 		boolean daemon = false;
 		String directorio = "";
-
+		
 		if (args.length > 0) {
 
 			directorio = args[0];

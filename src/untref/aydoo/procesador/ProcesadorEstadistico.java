@@ -47,9 +47,9 @@ public class ProcesadorEstadistico {
 			ID_auxiliar = recorridos.get(i).getID_bicicleta();
 			cantidadIDIguales = -1;
 
-			for (int j = 0; j < recorridos.size(); j++) {
+			for (RecorridoDeBicicleta recorrido : recorridos) {
 
-				if (recorridos.get(j).getID_bicicleta() == ID_auxiliar) {
+				if (recorrido.getID_bicicleta() == ID_auxiliar) {
 
 					cantidadIDIguales++;
 				}
@@ -77,9 +77,11 @@ public class ProcesadorEstadistico {
 			ID_auxiliar = recorridos.get(i).getID_bicicleta();
 			cantidadIDIguales = -1;
 
-			for (int j = 0; j < recorridos.size(); j++) {
+			// for (int j = 0; j < recorridos.size(); j++) {
 
-				if (recorridos.get(j).getID_bicicleta() == ID_auxiliar) {
+			for (RecorridoDeBicicleta recorrido : recorridos) {
+
+				if (recorrido.getID_bicicleta() == ID_auxiliar) {
 
 					cantidadIDIguales++;
 				}
@@ -99,14 +101,14 @@ public class ProcesadorEstadistico {
 		double tiempoTotal = .0f;
 		double tiempoPromedio = .0f;
 
-		for (int i = 0; i < recorridos.size(); i++) {
+		for (RecorridoDeBicicleta recorrido : recorridos) {
 
-			tiempoTotal = tiempoTotal + recorridos.get(i).getTiempoUso();
+			tiempoTotal = tiempoTotal + recorrido.getTiempoUso();
 		}
 
 		tiempoPromedio = tiempoTotal / recorridos.size();
 
-		return (tiempoPromedio);
+		return tiempoPromedio;
 	}
 
 	public String getRecorridoMasRealizado() {
@@ -121,11 +123,11 @@ public class ProcesadorEstadistico {
 			recorridoAuxiliar = recorridos.get(i);
 			cantidadRecorridosIguales = -1;
 
-			for (int j = 0; j < recorridos.size(); j++) {
+			for (RecorridoDeBicicleta recorrido : recorridos) {
 
-				if (recorridos.get(j).getID_estacionOrigen() == recorridoAuxiliar
+				if (recorrido.getID_estacionOrigen() == recorridoAuxiliar
 						.getID_estacionOrigen()
-						&& recorridos.get(j).getID_estacionDestino() == recorridoAuxiliar
+						&& recorrido.getID_estacionDestino() == recorridoAuxiliar
 								.getID_estacionDestino()) {
 
 					cantidadRecorridosIguales++;
@@ -138,7 +140,6 @@ public class ProcesadorEstadistico {
 				recorridoMasRealizado = recorridoAuxiliar;
 			}
 		}
-		
 		return recorridoMasRealizado.getParOrigenDestino();
 	}
 
