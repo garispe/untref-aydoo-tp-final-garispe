@@ -19,11 +19,6 @@ public class ManejadorArchivos {
 		this.directorio = new File(rutaDir);
 	}
 
-//	public void escribirYML(Resultado resultado) throws IOException {
-//
-//		Yaml.dump(resultado, new File(directorio.getPath() + "/resultado.yml"));
-//	}
-
 	public void descomprimirZIP(File archivo) throws IOException, ZipException {
 
 		ZipFile zip = new ZipFile(archivo);
