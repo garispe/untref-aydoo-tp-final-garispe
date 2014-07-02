@@ -8,9 +8,6 @@ import java.util.List;
 
 import net.lingala.zip4j.core.ZipFile;
 import net.lingala.zip4j.exception.ZipException;
-
-import org.ho.yaml.Yaml;
-
 import au.com.bytecode.opencsv.CSVReader;
 
 public class ManejadorArchivos {
@@ -22,10 +19,10 @@ public class ManejadorArchivos {
 		this.directorio = new File(rutaDir);
 	}
 
-	public void escribirYML(Resultado resultado) throws IOException {
-
-		Yaml.dump(resultado, new File(directorio.getPath() + "/resultado.yml"));
-	}
+//	public void escribirYML(Resultado resultado) throws IOException {
+//
+//		Yaml.dump(resultado, new File(directorio.getPath() + "/resultado.yml"));
+//	}
 
 	public void descomprimirZIP(File archivo) throws IOException, ZipException {
 

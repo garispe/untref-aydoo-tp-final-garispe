@@ -11,12 +11,14 @@ import net.lingala.zip4j.exception.ZipException;
 public class ProcesadorEstadistico {
 
 	private ManejadorArchivos manejadorArchivos;
+	private ManejadorYML manejadorYML;
 	private List<RecorridoDeBicicleta> recorridos;
 	private boolean daemon;
 
 	public ProcesadorEstadistico(String rutaDirectorio) {
 
 		this.manejadorArchivos = new ManejadorArchivos(rutaDirectorio);
+		this.manejadorYML = new ManejadorYML(rutaDirectorio);
 		this.recorridos = new ArrayList<RecorridoDeBicicleta>();
 	}
 
@@ -159,7 +161,7 @@ public class ProcesadorEstadistico {
 	public void generarYMLConResultado(Resultado resultado) throws IOException,
 			ZipException {
 
-		this.manejadorArchivos.escribirYML(resultado);
+		this.manejadorYML.escribirYML(resultado);
 
 	}
 
