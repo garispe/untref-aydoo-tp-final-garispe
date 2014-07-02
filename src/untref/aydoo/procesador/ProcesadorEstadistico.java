@@ -11,13 +11,13 @@ import net.lingala.zip4j.exception.ZipException;
 public class ProcesadorEstadistico {
 
 	private ManejadorArchivos manejadorArchivos;
-	private List<RecorridoPorBicicleta> recorridos;
+	private List<RecorridoDeBicicleta> recorridos;
 	private boolean daemon;
 
 	public ProcesadorEstadistico(String rutaDirectorio) {
 
 		this.manejadorArchivos = new ManejadorArchivos(rutaDirectorio);
-		this.recorridos = new ArrayList<RecorridoPorBicicleta>();
+		this.recorridos = new ArrayList<RecorridoDeBicicleta>();
 	}
 
 	public void cargarRecorridos() throws IOException, ZipException {
@@ -40,24 +40,24 @@ public class ProcesadorEstadistico {
 		int ID_bicicletaMasUsada = 0;
 		int maximo = 0;
 		int ID_auxiliar = 0;
-		int cantidadIguales;
+		int cantidadIDIguales;
 
 		for (int i = 0; i < recorridos.size(); i++) {
 
 			ID_auxiliar = recorridos.get(i).getID_bicicleta();
-			cantidadIguales = -1;
+			cantidadIDIguales = -1;
 
 			for (int j = 0; j < recorridos.size(); j++) {
 
 				if (recorridos.get(j).getID_bicicleta() == ID_auxiliar) {
 
-					cantidadIguales++;
+					cantidadIDIguales++;
 				}
 			}
 
-			if (cantidadIguales > maximo) {
+			if (cantidadIDIguales > maximo) {
 
-				maximo = cantidadIguales;
+				maximo = cantidadIDIguales;
 				ID_bicicletaMasUsada = ID_auxiliar;
 
 			}
@@ -70,24 +70,24 @@ public class ProcesadorEstadistico {
 		int ID_bicicletaMenosUsada = 0;
 		int minimo = recorridos.size();
 		int ID_auxiliar = 0;
-		int cantidadIguales;
+		int cantidadIDIguales;
 
 		for (int i = 0; i < recorridos.size(); i++) {
 
 			ID_auxiliar = recorridos.get(i).getID_bicicleta();
-			cantidadIguales = -1;
+			cantidadIDIguales = -1;
 
 			for (int j = 0; j < recorridos.size(); j++) {
 
 				if (recorridos.get(j).getID_bicicleta() == ID_auxiliar) {
 
-					cantidadIguales++;
+					cantidadIDIguales++;
 				}
 			}
 
-			if (cantidadIguales < minimo) {
+			if (cantidadIDIguales < minimo) {
 
-				minimo = cantidadIguales;
+				minimo = cantidadIDIguales;
 				ID_bicicletaMenosUsada = ID_auxiliar;
 			}
 		}
@@ -111,15 +111,15 @@ public class ProcesadorEstadistico {
 
 	public String getRecorridoMasRealizado() {
 
-		RecorridoPorBicicleta recorridoMasRealizado = null;
-		RecorridoPorBicicleta recorridoAuxiliar;
+		RecorridoDeBicicleta recorridoMasRealizado = null;
+		RecorridoDeBicicleta recorridoAuxiliar;
 		int maximo = 0;
-		int cantidadIguales;
+		int cantidadRecorridosIguales;
 
 		for (int i = 0; i < recorridos.size(); i++) {
 
 			recorridoAuxiliar = recorridos.get(i);
-			cantidadIguales = -1;
+			cantidadRecorridosIguales = -1;
 
 			for (int j = 0; j < recorridos.size(); j++) {
 
@@ -128,13 +128,13 @@ public class ProcesadorEstadistico {
 						&& recorridos.get(j).getID_estacionDestino() == recorridoAuxiliar
 								.getID_estacionDestino()) {
 
-					cantidadIguales++;
+					cantidadRecorridosIguales++;
 				}
 			}
 
-			if (cantidadIguales > maximo) {
+			if (cantidadRecorridosIguales > maximo) {
 
-				maximo = cantidadIguales;
+				maximo = cantidadRecorridosIguales;
 				recorridoMasRealizado = recorridoAuxiliar;
 			}
 		}
@@ -168,7 +168,7 @@ public class ProcesadorEstadistico {
 
 	public void modoDaemon() throws IOException, ZipException {
 
-		this.recorridos = new ArrayList<RecorridoPorBicicleta>();
+		this.recorridos = new ArrayList<RecorridoDeBicicleta>();
 		List<File> ZIPs = this.manejadorArchivos.getListaZIPs();
 
 		Iterator<File> itZips = ZIPs.iterator();

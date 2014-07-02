@@ -50,11 +50,11 @@ public class ManejadorArchivos {
 		return ZIPs;
 	}
 
-	public List<RecorridoPorBicicleta> cargarRecorridos() throws ZipException,
+	public List<RecorridoDeBicicleta> cargarRecorridos() throws ZipException,
 			IOException {
 
 		File[] archivos;
-		List<RecorridoPorBicicleta> recorridos = new ArrayList<RecorridoPorBicicleta>();
+		List<RecorridoDeBicicleta> recorridos = new ArrayList<RecorridoDeBicicleta>();
 
 		archivos = directorio.listFiles();
 
@@ -69,10 +69,10 @@ public class ManejadorArchivos {
 		return recorridos;
 	}
 
-	public List<RecorridoPorBicicleta> obtenerRecorridos(File archivoZip)
+	public List<RecorridoDeBicicleta> obtenerRecorridos(File archivoZip)
 			throws IOException, ZipException {
 
-		List<RecorridoPorBicicleta> recorridos = new ArrayList<RecorridoPorBicicleta>();
+		List<RecorridoDeBicicleta> recorridos = new ArrayList<RecorridoDeBicicleta>();
 		File[] archivos;
 
 		descomprimirZIP(archivoZip);
@@ -91,10 +91,10 @@ public class ManejadorArchivos {
 
 	}
 
-	public List<RecorridoPorBicicleta> parsearCSV(File archivo)
+	public List<RecorridoDeBicicleta> parsearCSV(File archivo)
 			throws IOException, ZipException {
 
-		List<RecorridoPorBicicleta> recorridos = new ArrayList<RecorridoPorBicicleta>();
+		List<RecorridoDeBicicleta> recorridos = new ArrayList<RecorridoDeBicicleta>();
 
 		CSVReader reader = new CSVReader(new FileReader(archivo), ';');
 
@@ -105,7 +105,7 @@ public class ManejadorArchivos {
 
 		while ((linea = reader.readNext()) != null) {
 
-			RecorridoPorBicicleta recorrido = new RecorridoPorBicicleta();
+			RecorridoDeBicicleta recorrido = new RecorridoDeBicicleta();
 
 			try {
 

@@ -1,6 +1,6 @@
 package untref.aydoo.procesador;
 
-public class RecorridoPorBicicleta {
+public class RecorridoDeBicicleta {
 
 	private int ID_usuario;
 	private int ID_bicicleta;

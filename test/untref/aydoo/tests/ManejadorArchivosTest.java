@@ -10,7 +10,7 @@ import net.lingala.zip4j.exception.ZipException;
 import org.junit.Test;
 
 import untref.aydoo.procesador.ManejadorArchivos;
-import untref.aydoo.procesador.RecorridoPorBicicleta;
+import untref.aydoo.procesador.RecorridoDeBicicleta;
 
 public class ManejadorArchivosTest {
 
@@ -20,7 +20,7 @@ public class ManejadorArchivosTest {
 
 		ManejadorArchivos manejador = new ManejadorArchivos("data");
 
-		List<RecorridoPorBicicleta> recorridos = new ArrayList<RecorridoPorBicicleta>();
+		List<RecorridoDeBicicleta> recorridos = new ArrayList<RecorridoDeBicicleta>();
 
 		recorridos = manejador.cargarRecorridos();
 
