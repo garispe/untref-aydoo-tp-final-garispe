@@ -24,7 +24,7 @@ public class ManejadorArchivos {
 
 	public void escribirYML(Resultado resultado) throws IOException {
 
-		Yaml.dump(resultado, new File(directorio.getName() + "/resultado.yml"));
+		Yaml.dump(resultado, new File(directorio.getPath() + "/resultado.yml"));
 	}
 
 	public void descomprimirZIP(File archivo) throws IOException, ZipException {
