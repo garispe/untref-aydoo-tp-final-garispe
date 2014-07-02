@@ -138,6 +138,7 @@ public class ProcesadorEstadistico {
 				recorridoMasRealizado = recorridoAuxiliar;
 			}
 		}
+		
 		return recorridoMasRealizado.getParOrigenDestino();
 	}
 
