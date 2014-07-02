@@ -1,4 +1,4 @@
-untref-aydoo-tp-final-garispe
-=============================
+Procesador Estadístico
+======================
 
-Trabajo Practico Final - AyDOO
+Trabajo Practico Final - Análisis y Diseño Orientado a Objetos, UNTREF
