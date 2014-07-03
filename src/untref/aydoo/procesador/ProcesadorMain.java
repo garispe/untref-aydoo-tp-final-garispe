@@ -12,12 +12,13 @@ public class ProcesadorMain {
 
 		boolean daemon = false;
 		String directorio = "";
-		
+
 		if (args.length > 0) {
 
 			directorio = args[0];
 
-			if (args[1].equals("-d") || args[1].equals("-daemon")) {
+			if (args.length == 2 && args[1].equals("-d")
+					|| args[1].equals("-daemon")) {
 
 				daemon = true;
 

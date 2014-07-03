@@ -1,5 +1,0 @@
---- !untref.aydoo.procesador.Resultado
-ID_bicicletaMasUsada: 1205
-ID_bicicletaMenosUsada: 1524
-recorridoMasRealizado: "20: ONCE - 7: PLAZA ROMA"
-tiempoPromedioUso: !java.lang.Double 29.88888888888889

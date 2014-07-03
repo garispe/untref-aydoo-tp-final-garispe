@@ -7,18 +7,16 @@ public class Resultado {
 	private String recorridoMasRealizado;
 	private double tiempoPromedioUso;
 
-	public Resultado(int ID_bicicletaMasUsada, int ID_bicicletaMenosUsada,
+	public Resultado(int ID_bicicletasMasUsadas, int ID_bicicletasMenosUsadas,
 			String recorridoMasRealizada, double tiempoPromedioUso) {
 
-		this.ID_bicicletaMasUsada = ID_bicicletaMasUsada;
-		this.ID_bicicletaMenosUsada = ID_bicicletaMenosUsada;
+		this.ID_bicicletaMasUsada = ID_bicicletasMasUsadas;
+		this.ID_bicicletaMenosUsada = ID_bicicletasMenosUsadas;
 		this.recorridoMasRealizado = recorridoMasRealizada;
 		this.tiempoPromedioUso = tiempoPromedioUso;
-
 	}
 
 	public Resultado() {
-
 	}
 
 	public int getID_bicicletaMasUsada() {
@@ -52,5 +50,4 @@ public class Resultado {
 	public void setTiempoPromedioUso(double tiempoPromedioUso) {
 		this.tiempoPromedioUso = tiempoPromedioUso;
 	}
-
 }
